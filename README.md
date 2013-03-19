@@ -13,6 +13,13 @@ Why Twitter?
  2. Twitter allows you to 'follow' anyone, without need for approval/reciprocal follow
  3. Sharing feeds doesn't have as many privacy concerns as sharing private data
 
+Why not FriendFeed?
+-------------------
+
+ 1. FriendFeed allows comments (status updates) without any basis (no point cloning Twitter)
+ 2. FriendFeed allows streams to be private (not open)
+ 3. FriendFeed allows posting images/files (copyright issues)
+
 Feed Streams
 ------------
 
