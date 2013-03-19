@@ -1,9 +1,7 @@
 feedhabit
 =========
 
-An industrial strength feed aggregator
-
-"It's what you have. It's what you do."
+A 'social' feed aggregator
 
 Feed aggregation is difficult because of the sheer quantity of feed items. Applying similar principles as Twitter
 can help to overcome the information overload and find relevance in the data.
@@ -31,4 +29,12 @@ Sharing items in your public Feed Stream is achieved in the following ways:
  1. Flag - mark an article as worthy of inclusion in your public Feed Stream
  2. Tag - categorise an article with a templated string (like a hashtag)
  3. Annotate - add a comment to an item
+
+Following
+---------
+
+Following the Feed Stream of other users has the following effects to your Feed Stream:
+
+ 1. Items that have been Flagged, Tagged or Annotated by a user you are following will appear in your Feed Stream (even if you are not subscribed to the source feed)
+ 2. Items will aggregate and show any Flags, Tags and Annotations on items from those you are following
 
