@@ -1,0 +1,56 @@
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+	version="2.4">
+	<display-name>FeedHabit</display-name>
+
+	<filter>
+		<filter-name>UrlRewriteFilter</filter-name>
+		<filter-class>org.tuckey.web.filters.urlrewrite.UrlRewriteFilter</filter-class>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>UrlRewriteFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+		<dispatcher>REQUEST</dispatcher>
+		<dispatcher>FORWARD</dispatcher>
+	</filter-mapping>
+
+	<listener>
+		<listener-class>com.feedhabit.RepositoryLoaderListener</listener-class>
+	</listener>
+
+	<servlet>
+		<servlet-name>Groovlet</servlet-name>
+		<servlet-class>groovy.servlet.GroovyServlet</servlet-class>
+	</servlet>
+    <servlet>
+        <servlet-name>Template</servlet-name>
+        <servlet-class>groovy.servlet.TemplateServlet</servlet-class>
+      <init-param>
+        <param-name>verbose</param-name>
+        <param-value>true</param-value>
+      </init-param>
+      <init-param>
+        <param-name>resource.name.regex</param-name>
+        <param-value>(.*\.html)</param-value>
+      </init-param>
+      <init-param>
+        <param-name>resource.name.replacement</param-name>
+        <param-value>WEB-INF/pages$1</param-value>
+      </init-param>
+    </servlet>
+
+	<servlet-mapping>
+		<servlet-name>Groovlet</servlet-name>
+		<url-pattern>*.groovy</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Template</servlet-name>
+		<url-pattern>*.html</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Template</servlet-name>
+		<url-pattern>*.gtpl</url-pattern>
+	</servlet-mapping>
+
+</web-app>
