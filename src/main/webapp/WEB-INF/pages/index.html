@@ -12,5 +12,8 @@
 </h1>
 <h2>${'another test'}</h2>
 <% html.h2('and another test') %>
+<% def printNode
+   printNode = {html.div(it.name); it.nodes.each {printNode(it)}}
+   printNode(request.jcr.rootNode['mn:subscriptions']) %>
 </body>
 </html>
