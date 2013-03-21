@@ -5,15 +5,10 @@
 <title>FeedHabit</title>
 </head>
 <body>
-<h1>
-<%
-    print 'test'
-%>
-</h1>
-<h2>${'another test'}</h2>
-<% html.h2('and another test') %>
-<% def printNode
-   printNode = {html.div(it.name); it.nodes.each {printNode(it)}}
-   printNode(request.jcr.rootNode['mn:subscriptions']) %>
+<% request.feedStream.each { item ->
+        html.div {
+            a(href:item['mn:link'].string, item['mn:title'].string)
+        }
+   } %>
 </body>
 </html>
