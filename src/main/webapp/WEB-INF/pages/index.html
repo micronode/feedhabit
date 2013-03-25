@@ -7,7 +7,7 @@
 </head>
 <body>
 <% request.feedStream.each { item ->
-        html.div {
+        html.div(class: 'card') {
             a(href:item['mn:link'].string, item['mn:title'].string.decodeHtml())
         }
    } %>
