@@ -8,7 +8,7 @@
 <body>
 <% request.feedStream.each { item ->
         html.div {
-            a(href:item['mn:link'].string, item['mn:title'].string)
+            a(href:item['mn:link'].string, item['mn:title'].string.decodeHtml())
         }
    } %>
 </body>
