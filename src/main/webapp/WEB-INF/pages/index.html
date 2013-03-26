@@ -4,10 +4,17 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>FeedHabit</title>
 <link rel="stylesheet" href="/theme.css" />
+<link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,200' rel='stylesheet' type='text/css'>
 </head>
 <body>
 <% request.feedStream.each { item ->
         html.div(class: 'card') {
+            if (item['mn:thumbnail']) {
+                img(src:item['mn:thumbnail'].string)
+            }
+            else {
+            	img(src:"/thumbnail.groovy?p=${item.parent.path}")
+            }
             a(href:item['mn:link'].string, item['mn:title'].string.decodeHtml())
         }
    } %>
