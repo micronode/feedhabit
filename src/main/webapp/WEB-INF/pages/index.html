@@ -8,6 +8,7 @@
 <body>
 <% request.feedStream.each { item ->
         html.div(class: 'card') {
+            img(src:"/thumbnail.groovy?p=${item.parent.path}")
             a(href:item['mn:link'].string, item['mn:title'].string.decodeHtml())
         }
    } %>
