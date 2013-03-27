@@ -16,6 +16,7 @@
             	img(src:"/thumbnail.groovy?p=${item.identifier}")
             }
             a(href:item['mn:link'].string, item['mn:title'].string.decodeHtml().take(180))
+            span(new com.ocpsoft.pretty.time.PrettyTime().format(item['mn:date'].date.time))
         }
    } %>
 </body>
