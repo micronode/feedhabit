@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>FeedHabit</title>
 <link rel="stylesheet" href="/theme.css" />
-<link href='http://fonts.googleapis.com/css?family=Lato:100,400' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200|Lato:100|Quicksand:300|Roboto:100' rel='stylesheet' type='text/css'>
 </head>
 <body>
 <% request.feedStream.each { item ->
@@ -15,7 +15,7 @@
             else {
             	img(src:"/thumbnail.groovy?p=${item.identifier}")
             }
-            a(href:item['mn:link'].string, item['mn:title'].string.decodeHtml())
+            a(href:item['mn:link'].string, item['mn:title'].string.decodeHtml().take(180))
         }
    } %>
 </body>
