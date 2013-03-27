@@ -9,8 +9,8 @@ Session session = repository.login(new SimpleCredentials('readonly', ''.toCharAr
 
 if (request.getParameter('p')) {
   def path = request.getParameter('p')
-  def thumbnailProperty = session.getNode(path)['mn:thumbnail']
-  def favIconProperty = session.getNode(path).parent['mn:icon']
+  def thumbnailProperty = session.getNodeByIdentifier(path)['mn:thumbnail']
+  def favIconProperty = session.getNodeByIdentifier(path).parent['mn:icon']
   if (thumbnailProperty) {
   	redirect thumbnailProperty.string
   }
