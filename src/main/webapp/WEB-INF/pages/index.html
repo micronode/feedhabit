@@ -13,7 +13,7 @@
                 img(src:item['mn:thumbnail'].string)
             }
             else {
-            	img(src:"/thumbnail.groovy?p=${item.parent.path}")
+            	img(src:"/thumbnail.groovy?p=${item.path}")
             }
             a(href:item['mn:link'].string, item['mn:title'].string.decodeHtml())
         }
