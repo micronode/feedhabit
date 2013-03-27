@@ -4,4 +4,4 @@ div.card {margin: auto; background:#aaa; width: 600px; height: 70px; vertical-al
 /* font-family: 'Yanone Kaffeesatz', sans-serif; font-size: 18px} */
 
 div.card img {float:left; margin-right:5px;margin-bottom:5px}
-div.card a {text-decoration:none}
+div.card a {text-decoration:none; font-weight: normal}
