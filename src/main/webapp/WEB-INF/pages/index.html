@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>FeedHabit</title>
 <link rel="stylesheet" href="/theme.css" />
-<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200|Lato:100|Quicksand:300|Roboto:100' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200|Lato:100|Quicksand:300|Roboto:100italic' rel='stylesheet' type='text/css'>
 <% include '/WEB-INF/includes/analytics.gtpl' %>
 </head>
 <body>
@@ -15,7 +15,7 @@
             }
             a(href:item['mn:link'].string, item['mn:title'].string.decodeHtml().take(180))
             span(new com.ocpsoft.pretty.time.PrettyTime().format(item['mn:date'].date.time))
-            div {
+            div(class: 'site') {
                 img(src:"/favicon.groovy?p=${item.parent.identifier}")
                 a(href:item.parent['mn:link'].string, item.parent['mn:title'].string)
             }
