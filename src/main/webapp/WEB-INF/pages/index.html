@@ -13,7 +13,7 @@
             a(href:item['mn:link'].string, item['mn:title'].string.decodeHtml().take(180))
             span(new com.ocpsoft.pretty.time.PrettyTime().format(item['mn:date'].date.time))
             if (item['mn:thumbnail']) {
-                img(src:item['mn:thumbnail'].string)
+                img(src:item['mn:thumbnail'].string, class:'thumbnail')
             }
             div {
                 img(src:"/favicon.groovy?p=${item.parent.identifier}")
