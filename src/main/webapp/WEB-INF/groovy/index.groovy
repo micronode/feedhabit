@@ -22,6 +22,7 @@ reader.read(new SiteResolver().getFeedUrls("slashdot.org")[0], callback)
 reader.read(new SiteResolver().getFeedUrls("theregister.co.uk")[0], callback)
 reader.read(new SiteResolver().getFeedUrls("ausdroid.net")[0], callback)
 reader.read(new SiteResolver().getFeedUrls("reddit.com")[0], callback)
+reader.read(new SiteResolver().getFeedUrls("infoworld.com")[0], callback)
 
 //request.jcr = session
 def subscriptionQuery = new QueryBuilder(session.workspace.queryManager).with {

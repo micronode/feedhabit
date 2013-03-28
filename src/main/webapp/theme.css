@@ -1,8 +1,28 @@
 body {font:18px 'Source Sans Pro', sans-serif; background:#eee; height:100%; margin:25px 0; padding:0}
 
-div.card {margin: auto; background:white; width: 600px; height: 70px; vertical-align: top; margin-top:10px; margin-bottom:10px; padding: 5px;}
+div.card {margin: auto; background:white; width: 600px; height: 70px; vertical-align: top; margin-top:10px; margin-bottom:10px; padding: 5px; position: relative}
 /* font-family: 'Yanone Kaffeesatz', sans-serif; font-size: 18px} */
 
 div.card img.thumbnail {float:right; margin-left:5px;margin-bottom:5px}
-div.card a {text-decoration:none; font-weight: normal; color:#aaa}
-div.card div.site {font: italic 16px 'Roboto'; height:100%; vertical-align:bottom}
+div.card a {
+    text-decoration:none; font-weight: normal; color:#aaa;
+}
+div.card div.article {
+    max-height: 52px;
+    overflow: hidden;
+    
+    /* "transparent" only works here because == rgba(0,0,0,0) */ 
+    /*background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, transparent),color-stop(1, black));
+    -webkit-gradient(
+  linear,
+  left top,
+  left bottom,
+  color-stop(0, rgba(255,0,0,0)),
+  color-stop(1, rgba(255,0,0,100)));
+        background-image: -webkit-linear-gradient(top, transparent, black);
+        background-image: -moz-linear-gradient(top, transparent, black);
+        background-image: -ms-linear-gradient(top, transparent, black);
+        background-image: -o-linear-gradient(top, transparent, black);
+    */
+}
+div.card div.site {font: italic 16px 'Roboto'; position: absolute; bottom: 0; left: 5}
