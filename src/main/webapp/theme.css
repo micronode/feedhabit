@@ -5,3 +5,4 @@ div.card {margin: auto; background:white; width: 600px; height: 70px; vertical-a
 
 div.card img.thumbnail {float:right; margin-left:5px;margin-bottom:5px}
 div.card a {text-decoration:none; font-weight: normal; color:#aaa}
+div.card div.site {font:16px 'Roboto' italic}
