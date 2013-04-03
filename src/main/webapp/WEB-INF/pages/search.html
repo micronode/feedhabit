@@ -8,6 +8,7 @@
 <% include '/WEB-INF/includes/analytics.gtpl' %>
 </head>
 <body>
+<% include '/WEB-INF/includes/search.gtpl' %>
 <%  def results = request.getAttribute('query')?.execute().rows
     if (results) {
         results.each { row ->
