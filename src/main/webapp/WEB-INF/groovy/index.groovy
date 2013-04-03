@@ -9,10 +9,8 @@ import org.mnode.newsagent.jcr.JcrFeedCallback
 import org.mnode.newsagent.util.FeedFetcherCacheImpl
 import org.mnode.newsagent.util.SiteResolver
 
-def context = new InitialContext()
-def repository = context.lookup('feedhabit')
 
-Session session = repository.login(new SimpleCredentials('readonly', ''.toCharArray()))
+Session session = request.getAttribute('jcrSession')
 
 JcrFeedCallback callback = [node:session.save {rootNode << 'mn:subscriptions'}, downloadEnclosures:false]
 session.save {rootNode << 'mn:tags'}

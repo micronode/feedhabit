@@ -2,10 +2,7 @@ import javax.jcr.Session
 import javax.jcr.SimpleCredentials
 import javax.naming.InitialContext
 
-def context = new InitialContext()
-def repository = context.lookup('feedhabit')
-
-Session session = repository.login(new SimpleCredentials('readonly', ''.toCharArray()))
+Session session = request.getAttribute('jcrSession')
 
 if (request.getParameter('p')) {
   def path = request.getParameter('p')
