@@ -20,7 +20,7 @@ class RepositoryLoaderListener implements ServletContextListener {
         homeDir.mkdirs()
         log.info "feedhabit home: [$homeDir.absolutePath]"
         def configFile = new File(homeDir, "config.xml")
-        configFile.text = RepositoryLoaderListener.getResourceAsStream("/config.xml").text
+        configFile.text = RepositoryLoaderListener.getResourceAsStream("/config-mysql.xml").text
         
         File repositoryLocation = [homeDir, "data"]
         
