@@ -4,7 +4,7 @@ jQuery(document).ready(function() {
   jQuery("div.content").hide();
   jQuery("div.card").click(function()
   {
-    jQuery(this).next("div.content").slideToggle(500);
+    jQuery(this).children("div.content").slideToggle(500);
   });
 });
 </script>
