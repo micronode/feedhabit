@@ -19,7 +19,7 @@
                 a(href:item['mn:link'].string, item['mn:title'].string.decodeHtml().take(160))
                 span(new com.ocpsoft.pretty.time.PrettyTime().format(item['mn:date'].date.time))
             }
-            div(class: 'content', '"' + item['mn:description'].string + '"')
+            div(class: 'content', item['mn:description'].string.decodeHtml())
             div(class: 'site') {
                 img(src:"/favicon.groovy?p=${item.parent.identifier}")
                 a(href:item.parent['mn:link'].string, item.parent['mn:title'].string)
