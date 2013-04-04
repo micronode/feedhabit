@@ -5,6 +5,16 @@
 <title>FeedHabit</title>
 <link rel="stylesheet" href="/theme.css" />
 <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200|Lato:100|Quicksand:300|Roboto:100italic' rel='stylesheet' type='text/css'>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"/>
+<script type="text/javascript">
+jQuery(document).ready(function() {
+  jQuery("div.content").hide();
+  jQuery("div.card").click(function()
+  {
+    jQuery(this).next("div.content").slideToggle(500);
+  });
+});
+</script>
 <% include '/WEB-INF/includes/analytics.gtpl' %>
 </head>
 <body>
