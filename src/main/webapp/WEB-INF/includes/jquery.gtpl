@@ -4,8 +4,9 @@ jQuery(document).ready(function() {
   jQuery("div.content").hide();
   jQuery("div.card").click(function()
   {
+    jQuery("div.content").hide();
     jQuery("div.card").height(70)
-    jQuery(this).height(140)
+    jQuery(this).height(220)
     jQuery(this).children("div.content").slideToggle(500);
   });
 });

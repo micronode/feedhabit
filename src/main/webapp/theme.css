@@ -27,5 +27,5 @@ div.card div.article {
         background-image: -o-linear-gradient(top, transparent, black);
     */
 }
-div.card div.content {overflow:scroll}
+div.card div.content {height: 150px; overflow:scroll}
 div.card div.site {font: italic 16px 'Roboto'; position: absolute; bottom: 0; left: 5}
