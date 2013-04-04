@@ -29,7 +29,7 @@ jQuery(document).ready(function() {
                 span(new com.ocpsoft.pretty.time.PrettyTime().format(item['mn:date'].date.time))
             }
             div(class: 'content') {
-                item['mn:description'].string
+                span(item['mn:description'].string)
             }
             div(class: 'site') {
                 img(src:"/favicon.groovy?p=${item.parent.identifier}")
