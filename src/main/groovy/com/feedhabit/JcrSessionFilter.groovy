@@ -24,12 +24,14 @@ class JcrSessionFilter implements Filter {
 		Session session = repository.login(new SimpleCredentials('readonly', ''.toCharArray()))
 		request.setAttribute('jcrSession', session)
 		
-		chain.doFilter(request, response)
-		
-		session.logout()
+		try {
+			chain.doFilter(request, response)
+		} finally {
+			session.logout()
+		}
 	}
 
-	public void init(FilterConfig arg0) throws ServletException {
+	public void init(FilterConfig config) throws ServletException {
 		// TODO Auto-generated method stub
 
 	}
