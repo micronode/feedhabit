@@ -10,7 +10,7 @@
 </head>
 <body>
 <% include '/WEB-INF/includes/search.gtpl' %>
-<% request.feedStream.each { item ->
+<% request.feedStream.take(25).each { item ->
         html.div(class: 'card') {
             if (item['mn:thumbnail']) {
                 img(src:item['mn:thumbnail'].string, class:'thumbnail')
