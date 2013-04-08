@@ -10,7 +10,7 @@ import org.mnode.newsagent.util.FeedFetcherCacheImpl
 import org.mnode.newsagent.util.SiteResolver
 
 
-Session session = request.getAttribute('jcrSession')
+Session session = request.jcrSession
 
 JcrFeedCallback callback = [node:session.save {rootNode << 'mn:subscriptions'}, downloadEnclosures:false]
 session.save {rootNode << 'mn:tags'}
