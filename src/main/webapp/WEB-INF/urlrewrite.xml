@@ -12,6 +12,14 @@
 
     <rule>
         <note>
+            Redirect for the homepage
+        </note>
+        <from>^/$</from>
+        <to type="redirect">%{context-path}/index.groovy</to>
+    </rule>
+    
+    <rule>
+        <note>
             The rule means that requests to /test/status/ will be redirected to /rewrite-status
             the url will be rewritten.
         </note>
@@ -28,6 +36,14 @@
         <from>/(view|edit|history)/(.*)</from>
         <to>%{context-path}/$1.groovy?p=/mn:content/$2</to>
     </rule>
+
+    <outbound-rule>
+        <note>
+            index.groovy appears as root
+        </note>
+        <from>%{context-path}/index.groovy</from>
+        <to>/</to>
+    </outbound-rule>
 
     <outbound-rule>
         <note>
