@@ -41,7 +41,7 @@
         <note>
             index.groovy appears as root
         </note>
-        <from>%{context-path}/index.groovy</from>
+        <from>/index.groovy</from>
         <to>/</to>
     </outbound-rule>
 
