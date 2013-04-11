@@ -11,7 +11,7 @@ import org.mnode.newsagent.util.SiteResolver
 
 
 Session session = request.jcrSession
-
+/*
 JcrFeedCallback callback = [node:session.save {rootNode << 'mn:subscriptions'}, downloadEnclosures:false]
 session.save {rootNode << 'mn:tags'}
 
@@ -21,7 +21,7 @@ reader.read(new SiteResolver().getFeedUrls("theregister.co.uk")[0], callback)
 reader.read(new SiteResolver().getFeedUrls("ausdroid.net")[0], callback)
 reader.read(new SiteResolver().getFeedUrls("reddit.com")[0], callback)
 reader.read(new SiteResolver().getFeedUrls("infoworld.com")[0], callback)
-
+*/
 //request.jcr = session
 def subscriptionQuery = new QueryBuilder(session.workspace.queryManager).with {
 	query(
