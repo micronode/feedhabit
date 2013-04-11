@@ -9,7 +9,7 @@
 <% include '/WEB-INF/includes/analytics.gtpl' %>
 </head>
 <body>
-<% include '/WEB-INF/includes/search.gtpl' %>
+<% include '/WEB-INF/includes/header.gtpl' %>
 <% request.feedStream.take(25).each { item ->
         html.div(class: 'card') {
             if (item['mn:thumbnail']) {
