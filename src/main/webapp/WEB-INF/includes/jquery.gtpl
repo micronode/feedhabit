@@ -4,13 +4,13 @@
 <script type="text/javascript">
 jQuery(document).ready(function() {
 //  jQuery("div.content").hide();
-  jQuery("div.card").click(function()
+  jQuery("a.showSummary").click(function()
   {
 //    jQuery("div.content").hide();
 //    jQuery("div.card").height(70)
 //    jQuery(this).height(220)
 //    jQuery(this).children("div.content").show("fast");
-    jQuery(this).children("div.content").dialog({
+    jQuery(this).parent().children("div.content").dialog({
       height: 360,
       width: 540,
       modal: true
