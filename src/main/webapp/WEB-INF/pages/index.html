@@ -11,6 +11,7 @@
 </head>
 <body>
 <% include '/WEB-INF/includes/header.gtpl' %>
+<% include '/WEB-INF/includes/subscribe.gtpl' %>
 <% request.feedStream.take(25).each { item ->
         html.div(class: 'card') {
             if (item['mn:thumbnail']) {

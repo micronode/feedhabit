@@ -4,6 +4,15 @@
 <script type="text/javascript">
 jQuery(document).ready(function() {
 //  jQuery("div.content").hide();
+  jQuery("a.subscribe").click(function()
+  {
+    jQuery("div.subscribe").dialog({
+      height: 360,
+      width: 540,
+      modal: true
+    });
+  });
+
   jQuery("a.showSummary").click(function()
   {
 //    jQuery("div.content").hide();

@@ -4,4 +4,5 @@
         <input type="text" name="q" value="${request.getParameter('q') ?: ''}"/>
         <input type="submit" value="Search"/>
     </form>
+    <a class="subscribe">Add Subscription..</a>
 </div>
