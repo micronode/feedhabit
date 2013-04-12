@@ -24,9 +24,9 @@ div.header {
 div.card {margin: auto; background:white; width: 600px; height: 70px; vertical-align: top; margin-top:10px; margin-bottom:10px; padding: 5px; position: relative}
 /* font-family: 'Yanone Kaffeesatz', sans-serif; font-size: 18px} */
 
-div.search {margin: auto; width: 600px; height:100%; }
+div.search {margin: auto; width: 600px; height:100%;vertical-align:middle }
 div.search img {margin:5px}
-div.search form {display:inline-block;vertical-align:center}
+div.search form {display:inline-block;}
 
 div.card img.thumbnail {float:right; margin-left:5px;margin-bottom:5px}
 div.card a {
