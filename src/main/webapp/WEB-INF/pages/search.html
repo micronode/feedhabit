@@ -19,16 +19,19 @@
                     img(src:item['mn:thumbnail'].string, class:'thumbnail')
                 }
                 div(class: 'article') {
-                    a(href:item['mn:link'].string, item['mn:title'].string.decodeHtml().take(160))
+                    a(href:item['mn:link'].string) {
+                      mkp.yieldUnescaped item['mn:title'].string.take(160)
+                    }
                     span(new com.ocpsoft.pretty.time.PrettyTime().format(item['mn:date'].date.time))
                 }
-                div(class: 'content') {
-                    span(item['mn:description'].string)
-                }
+                div(class: 'content', title: "${item['mn:title'].string.take(50)}...") {
+                	mkp.yieldUnescaped item['mn:description'].string
+            	}
                 div(class: 'site') {
                     img(src:"/favicon.groovy?p=${item.parent.identifier}")
                     a(href:item.parent['mn:link'].string, item.parent['mn:title'].string)
                 }
+                a(class: 'showSummary', 'More..')
             }
         }
    } %>
