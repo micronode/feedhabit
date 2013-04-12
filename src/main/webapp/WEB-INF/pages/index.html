@@ -29,6 +29,7 @@
                 img(src:"/favicon.groovy?p=${item.parent.identifier}")
                 a(href:item.parent['mn:link'].string, item.parent['mn:title'].string)
             }
+            a(class: 'showSummary', 'More..')
         }
    } %>
 <% include '/WEB-INF/includes/footer.gtpl' %>
