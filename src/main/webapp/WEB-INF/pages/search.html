@@ -10,8 +10,11 @@
 </head>
 <body>
 <% include '/WEB-INF/includes/header.gtpl' %>
-<%  def results = request.getAttribute('query')?.execute().rows
+<%  def results = request.getAttribute('query')?.execute().rows.toList()
     if (results) {
+        results.sort(true) { a, b ->
+            b.node['mn:date'].date.time <=> a.node['mn:date'].date.time
+        }
         results.each { row ->
             def item = row.node
             html.div(class: 'card') {
