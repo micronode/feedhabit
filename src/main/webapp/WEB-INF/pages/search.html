@@ -13,7 +13,7 @@
 <%  def results = request.getAttribute('query')?.execute().rows.toList()
     if (results) {
         results.sort(true) { a, b ->
-            b.node['mn:date']?.date.time <=> a.node['mn:date']?.date.time
+            b.node['mn:date']?.date?.time <=> a.node['mn:date']?.date?.time
         }
         results.each { row ->
             def item = row.node
