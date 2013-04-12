@@ -11,7 +11,8 @@ jQuery(document).ready(function() {
 //    jQuery(this).height(220)
 //    jQuery(this).children("div.content").show("fast");
     jQuery(this).children("div.content").dialog({
-      height: 140,
+      height: 400,
+      width: 500,
       modal: true
     });
   });
