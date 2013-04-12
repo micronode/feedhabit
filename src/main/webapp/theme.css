@@ -32,6 +32,10 @@ div.card img.thumbnail {float:right; margin-left:5px;margin-bottom:5px}
 div.card a {
     text-decoration:none; font-weight: normal; color:#aaa;
 }
+div.card a.showSummary {
+    font-size: 0.8em;
+    float:right;
+}
 div.card div.article {
     max-height: 52px;
     overflow: hidden;
