@@ -31,7 +31,7 @@ div.search form {display:inline-block;}
 a.subscribe {font-size:0.8em;}
 div.subscribe {display:none}
 
-div.card img.thumbnail {float:right; margin-left:5px;margin-bottom:5px}
+div.card img.thumbnail {float:right; margin-left:5px;margin-bottom:5px;height:70px}
 div.card a {
     text-decoration:none; font-weight: normal; color:#aaa;
 }
