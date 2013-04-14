@@ -12,7 +12,15 @@ if (request.getParameter('s')) {
 	session.save {rootNode << 'mn:tags'}
 	
 	FeedReader reader = new FeedReaderImpl(new FeedFetcherCacheImpl('org.mnode.newsagent.reader.feedCache'))
-	reader.read(new SiteResolver().getFeedUrls(request.getParameter('s'))[0], callback)
+	try {
+		reader.read(new SiteResolver().getFeedUrls(request.getParameter('s'))[0], callback)
+	} catch (IllegalArgumentException iae) {
+		try {
+			reader.read(new URL(request.getParameter('s')), callback)
+		} catch (MalformedURLException mue) {
+			// log invalid feed..
+		}
+	}
 }
 
 redirect '/'
