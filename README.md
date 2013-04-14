@@ -3,6 +3,8 @@ feedhabit
 
 A 'social' feed aggregator
 
+http://feedhabit.com
+
 Feed aggregation is difficult because of the sheer quantity of feed items. Applying similar principles as Twitter
 can help to overcome the information overload and find relevance in the data.
 
