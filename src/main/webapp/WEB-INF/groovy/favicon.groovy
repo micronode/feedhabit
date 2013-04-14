@@ -14,6 +14,6 @@ if (request.getParameter('p')) {
     sout << favIconProperty.binary.stream
   }
   else {
-	  redirect '/images/fh48.png'
+	  redirect '/images/fh16.png'
   }
 }
