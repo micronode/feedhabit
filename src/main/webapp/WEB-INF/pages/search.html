@@ -17,24 +17,27 @@
         }
         results.each { row ->
             def item = row.node
-            html.div(class: 'card') {
-                if (item['mn:thumbnail']) {
-                    img(src:item['mn:thumbnail'].string, class:'thumbnail')
-                }
-                div(class: 'article') {
-                    a(href:item['mn:link'].string) {
-                      mkp.yieldUnescaped item['mn:title'].string.take(160)
+            // check if item is an article..
+            if (item['mn:date']) {
+                html.div(class: 'card') {
+                    if (item['mn:thumbnail']) {
+                        img(src:item['mn:thumbnail'].string, class:'thumbnail')
                     }
-                    span(new com.ocpsoft.pretty.time.PrettyTime().format(item['mn:date'].date.time))
+                    div(class: 'article') {
+                        a(href:item['mn:link'].string) {
+                          mkp.yieldUnescaped item['mn:title'].string.take(160)
+                        }
+                        span(new com.ocpsoft.pretty.time.PrettyTime().format(item['mn:date'].date.time))
+                    }
+                    div(class: 'content', title: "${item['mn:title'].string.take(50)}...") {
+                    	mkp.yieldUnescaped item['mn:description'].string
+                	}
+                    div(class: 'site') {
+                        img(src:"/favicon.groovy?p=${item.parent.identifier}")
+                        a(href:item.parent['mn:link'].string, item.parent['mn:title'].string)
+                    }
+                    a(class: 'showSummary', 'More..')
                 }
-                div(class: 'content', title: "${item['mn:title'].string.take(50)}...") {
-                	mkp.yieldUnescaped item['mn:description'].string
-            	}
-                div(class: 'site') {
-                    img(src:"/favicon.groovy?p=${item.parent.identifier}")
-                    a(href:item.parent['mn:link'].string, item.parent['mn:title'].string)
-                }
-                a(class: 'showSummary', 'More..')
             }
         }
    } %>
