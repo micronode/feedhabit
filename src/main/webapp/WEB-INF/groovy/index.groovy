@@ -28,15 +28,20 @@ def subscriptionQuery = new QueryBuilder(session.workspace.queryManager).with {
 		source: selector(nodeType: 'nt:unstructured', name: 'subscriptions'),
 		constraint: and(
 			constraint1: descendantNode(selectorName: 'subscriptions', path: '/mn:subscriptions'),
-			constraint2: propertyExistence(selectorName: 'subscriptions', propertyName: 'mn:status'))
+			constraint2: propertyExistence(selectorName: 'subscriptions', propertyName: 'mn:date')),
+		orderings: [
+			descending(operand: propertyValue(selectorName: 'subscriptions', propertyName: 'mn:date'))]
 	)
 }
+/*
 request.feedStream = []
 subscriptionQuery.execute().nodes.toList().each {
 	request.feedStream.addAll it.nodes.toList()
 }
-request.feedStream.sort(true) { a, b ->
-	b['mn:date'].date.time <=> a['mn:date'].date.time
-}
+*/
+request.feedStream = subscriptionQuery.execute().nodes
+//request.feedStream.sort(true) { a, b ->
+//	b['mn:date'].date.time <=> a['mn:date'].date.time
+//}
 
 forward 'index.html'
