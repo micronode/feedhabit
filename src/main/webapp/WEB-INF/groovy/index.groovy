@@ -1,5 +1,6 @@
 import javax.jcr.Session
 import javax.jcr.SimpleCredentials
+import javax.jcr.query.qom.QueryObjectModelConstants;
 import javax.naming.InitialContext
 
 import org.mnode.juicer.query.QueryBuilder
@@ -28,7 +29,13 @@ def subscriptionQuery = new QueryBuilder(session.workspace.queryManager).with {
 		source: selector(nodeType: 'nt:unstructured', name: 'subscriptions'),
 		constraint: and(
 			constraint1: descendantNode(selectorName: 'subscriptions', path: '/mn:subscriptions'),
-			constraint2: propertyExistence(selectorName: 'subscriptions', propertyName: 'mn:date')),
+			constraint2: and(
+				constraint1: propertyExistence(selectorName: 'subscriptions', propertyName: 'mn:date'),
+				constraint2: comparison(
+						operand1: propertyValue(selectorName: 'subscriptions', propertyName: 'mn:date'),
+						operator: QueryObjectModelConstants.JCR_OPERATOR_GREATER_THAN_OR_EQUAL_TO,
+						operand2: literal(session.valueFactory.createValue((new Date() - 3).toCalendar())),
+					))),
 		orderings: [
 			descending(operand: propertyValue(selectorName: 'subscriptions', propertyName: 'mn:date'))]
 	)
