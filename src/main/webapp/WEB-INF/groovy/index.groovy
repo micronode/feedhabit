@@ -39,7 +39,7 @@ subscriptionQuery.execute().nodes.toList().each {
 	request.feedStream.addAll it.nodes.toList()
 }
 */
-request.feedStream = subscriptionQuery.execute().nodes
+request.feedStream = subscriptionQuery.execute().rows
 //request.feedStream.sort(true) { a, b ->
 //	b['mn:date'].date.time <=> a['mn:date'].date.time
 //}

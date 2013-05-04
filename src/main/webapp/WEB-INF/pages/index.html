@@ -11,7 +11,8 @@
 </head>
 <body>
 <% include '/WEB-INF/includes/header.gtpl' %>
-<% request.feedStream.take(25).each { item ->
+<% request.feedStream.take(25).each { row ->
+        def item = row.node
         html.div(class: 'card') {
             if (item['mn:thumbnail']) {
                 img(src:item['mn:thumbnail'].string, class:'thumbnail')
