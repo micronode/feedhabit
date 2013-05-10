@@ -64,6 +64,6 @@ class ScheduledUpdateListener implements ServletContextListener {
 					asyncUpdate it
 				}
 //			}
-		}, 0, 30, TimeUnit.MINUTES)
+		}, 0, 60, TimeUnit.MINUTES)
 	}
 }
