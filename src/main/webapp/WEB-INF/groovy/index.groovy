@@ -34,7 +34,7 @@ def subscriptionQuery = new QueryBuilder(session.workspace.queryManager).with {
 				constraint2: comparison(
 						operand1: propertyValue(selectorName: 'subscriptions', propertyName: 'mn:date'),
 						operator: QueryObjectModelConstants.JCR_OPERATOR_GREATER_THAN_OR_EQUAL_TO,
-						operand2: literal(session.valueFactory.createValue((new Date() - 3).toCalendar())),
+						operand2: literal(session.valueFactory.createValue((new Date() - 1).toCalendar())),
 					))),
 		orderings: [
 			descending(operand: propertyValue(selectorName: 'subscriptions', propertyName: 'mn:date'))]
