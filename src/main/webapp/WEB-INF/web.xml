@@ -34,6 +34,9 @@
 	<listener>
 		<listener-class>com.feedhabit.ScheduledUpdateListener</listener-class>
 	</listener>
+	<listener>
+		<listener-class>com.feedhabit.ScheduledCleanupListener</listener-class>
+	</listener>
 
 	<servlet>
 		<servlet-name>Groovlet</servlet-name>
