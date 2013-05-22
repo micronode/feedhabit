@@ -1,1 +1,9 @@
 /* Include CSS specific to the layout (not appearance) */
+
+div.searchcloud {
+    float:right;
+    display:block;
+    position:fixed;
+    left: 50%;
+    margin-left: 310px;
+}

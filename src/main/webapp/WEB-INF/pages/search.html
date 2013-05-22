@@ -10,6 +10,8 @@
 </head>
 <body>
 <% include '/WEB-INF/includes/header.gtpl' %>
+<% include '/WEB-INF/includes/header.gtpl' %>
+<div>
 <%  def results = request.getAttribute('query')?.execute().rows.toList()
     if (results) {
         results.sort(true) { a, b ->
@@ -41,6 +43,7 @@
             }
         }
    } %>
+</div>
 <% include '/WEB-INF/includes/footer.gtpl' %>
 </body>
 </html>

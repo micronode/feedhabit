@@ -11,6 +11,8 @@
 </head>
 <body>
 <% include '/WEB-INF/includes/header.gtpl' %>
+<div>
+<% include '/WEB-INF/includes/searchcloud.gtpl' %>
 <% request.feedStream.take(100).each { row ->
         def item = row.node
         html.div(class: 'card') {
@@ -33,6 +35,7 @@
             a(class: 'showSummary', 'More..')
         }
    } %>
+</div>
 <% include '/WEB-INF/includes/footer.gtpl' %>
 </body>
 </html>
