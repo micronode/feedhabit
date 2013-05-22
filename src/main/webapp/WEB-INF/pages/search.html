@@ -3,6 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>FeedHabit | ${request.getParameter('q')}</title>
+<link rel="stylesheet" href="/layout.css" />
 <link rel="stylesheet" href="/theme.css" />
 <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200|Lato:100|Quicksand:300|Roboto:100italic' rel='stylesheet' type='text/css'>
 <% include '/WEB-INF/includes/jquery.gtpl' %>
@@ -10,8 +11,8 @@
 </head>
 <body>
 <% include '/WEB-INF/includes/header.gtpl' %>
-<% include '/WEB-INF/includes/header.gtpl' %>
 <div>
+<% include '/WEB-INF/includes/searchcloud.gtpl' %>
 <%  def results = request.getAttribute('query')?.execute().rows.toList()
     if (results) {
         results.sort(true) { a, b ->
