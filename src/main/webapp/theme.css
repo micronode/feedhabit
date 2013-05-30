@@ -28,6 +28,12 @@ div.search {margin: auto; width: 600px; height:100%;vertical-align:middle }
 div.search img {margin:5px}
 div.search form {display:inline-block;}
 
+div.searchcloud {
+    background:white;
+    padding: 5px;
+    min-height: 160px;
+}
+
 a.subscribe {font-size:0.8em;}
 div.subscribe {display:none}
 
