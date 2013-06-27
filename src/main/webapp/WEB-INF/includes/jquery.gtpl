@@ -19,7 +19,8 @@ jQuery(document).ready(function() {
 //    jQuery("div.card").height(70)
 //    jQuery(this).height(220)
 //    jQuery(this).children("div.content").show("fast");
-    jQuery(this).parent().children("div.content").dialog({
+    var articleId = jQuery(this).parent().children("div.content").attr('id');
+    jQuery(this).parent().children("div.content").load('summary.groovy', {p:articleId}).dialog({
       height: 360,
       width: 540,
       modal: true
