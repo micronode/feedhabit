@@ -10,8 +10,9 @@ Session session = repository.login(new SimpleCredentials('readonly', ''.toCharAr
 if (request.getParameter('p')) {
   def path = request.getParameter('p')
   def item = session.getNodeByIdentifier(path)
-  json.data {
-    title "${item['mn:title'].string.take(50)}..."
-    content item['mn:description'].string
-  }
+//  json.data {
+//    title "${item['mn:title'].string.take(50)}..."
+//    content item['mn:description'].string
+//  }
+  sout << item['mn:description'].string
 }
