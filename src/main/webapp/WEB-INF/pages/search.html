@@ -32,9 +32,9 @@
                         }
                         span(new com.ocpsoft.pretty.time.PrettyTime().format(item['mn:date'].date.time))
                     }
-                    div(class: 'content', title: "${item['mn:title'].string.take(50)}...") {
-                    	mkp.yieldUnescaped item['mn:description'].string
-                	}
+//                    div(class: 'content', title: "${item['mn:title'].string.take(50)}...") {
+//                    	mkp.yieldUnescaped item['mn:description'].string
+//                	}
                     div(class: 'site') {
                         img(src:"/favicon.groovy?p=${item.parent.identifier}")
                         a(href:item.parent['mn:link'].string, item.parent['mn:title'].string)
