@@ -32,7 +32,7 @@
                         }
                         span(new com.ocpsoft.pretty.time.PrettyTime().format(item['mn:date'].date.time))
                     }
-                    div(class: 'content', title: "${item['mn:title'].string.take(50)}...") {
+            div(class: 'content', title: "${item['mn:title'].string.take(50)}...", id: item.identifier) {
 //                    	mkp.yieldUnescaped item['mn:description'].string
                 	}
                     div(class: 'site') {
