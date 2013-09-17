@@ -29,7 +29,7 @@ jQuery(document).ready(function() {
                 jQuery('#' + articleId).dialog('close');
             })
         },
-      close: function(ev, ui) { $(this).remove(); }
+      close: function(ev, ui) { $$(this).remove(); }
     });
   });
 });
