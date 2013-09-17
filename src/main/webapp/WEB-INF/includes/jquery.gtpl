@@ -23,7 +23,12 @@ jQuery(document).ready(function() {
     jQuery(this).parent().children("div.content").load('summary.groovy', {p:articleId}).dialog({
       height: 360,
       width: 540,
-      modal: true
+      modal: true,
+      open: function(){
+            jQuery('.ui-widget-overlay').bind('click',function(){
+                jQuery('#' + articleId).dialog('close');
+            })
+        }
     });
   });
 });
