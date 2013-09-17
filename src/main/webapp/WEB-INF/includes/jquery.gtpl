@@ -26,10 +26,12 @@ jQuery(document).ready(function() {
       modal: true,
       open: function(){
             jQuery('.ui-widget-overlay').bind('click',function(){
-                jQuery('#' + articleId).dialog('close');
+                jQuery('#' + articleId).dialog('destroy');
             })
         },
-      close: function(ev, ui) { $$(this).remove(); }
+      close: function() {
+            jQuery('#' + articleId).dialog('destroy');
+        }
     });
   });
 });
