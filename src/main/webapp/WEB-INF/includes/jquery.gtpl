@@ -28,7 +28,7 @@ jQuery(document).ready(function() {
             jQuery('.ui-widget-overlay').bind('click',function(){
                 jQuery('#' + articleId).dialog('close');
             })
-        }
+        },
       close: function(ev, ui) { $(this).remove(); }
     });
   });
