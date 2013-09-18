@@ -1,4 +1,4 @@
-<div class="subscribe">
+<div class="subscribe" title="Modify subscriptions">
     <form action="subscribe.groovy" method="GET">
         <input type="text" name="s"/>
         <input type="submit" value="Subscribe"/>
