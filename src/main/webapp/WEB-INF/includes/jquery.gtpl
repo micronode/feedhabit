@@ -9,7 +9,12 @@ jQuery(document).ready(function() {
     jQuery("div.subscribe").dialog({
       height: 360,
       width: 540,
-      modal: true
+      modal: true,
+      open: function(){
+            jQuery('.ui-widget-overlay').bind('click',function(){
+                jQuery("div.subscribe").dialog('close');
+            })
+        }
     });
   });
 
