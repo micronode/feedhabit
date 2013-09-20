@@ -3,7 +3,7 @@ body {font:18px 'Source Sans Pro', sans-serif; background:#eee; height:100%; mar
 div.header {
     z-index:1;
     width:100%;
-    height:60px;
+    height:65px;
     display:block;
     position:fixed;
     /*
@@ -21,7 +21,7 @@ div.header {
     -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
 }
 
-div.card {margin: auto; background:white; width: 600px; height: 70px; vertical-align: top; margin-top:5px; margin-bottom:5px; padding: 10px; position: relative}
+div.card {margin: auto; background:white; width: 600px; height: 75px; vertical-align: top; margin-top:5px; margin-bottom:5px; padding: 10px; position: relative}
 /* font-family: 'Yanone Kaffeesatz', sans-serif; font-size: 18px} */
 
 div.search {margin: auto; width: 600px; height:100%;vertical-align:middle }
