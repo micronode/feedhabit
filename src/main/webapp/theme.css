@@ -21,7 +21,7 @@ div.header {
     -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
 }
 
-div.card {margin: auto; background:white; width: 600px; height: 70px; vertical-align: top; margin-top:5px; margin-bottom:5px; padding: 5px; position: relative}
+div.card {margin: auto; background:white; width: 600px; height: 70px; vertical-align: top; margin-top:5px; margin-bottom:5px; padding: 10px; position: relative}
 /* font-family: 'Yanone Kaffeesatz', sans-serif; font-size: 18px} */
 
 div.search {margin: auto; width: 600px; height:100%;vertical-align:middle }
@@ -64,4 +64,4 @@ div.card div.article {
     */
 }
 div.card div.content {height: 150px; overflow:scroll; display:none}
-div.card div.site {font: italic 16px 'Roboto'; position: absolute; bottom: 0; left: 5}
+div.card div.site {font: italic 16px 'Roboto'; position: absolute; bottom: 10px;}
