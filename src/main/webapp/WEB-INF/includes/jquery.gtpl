@@ -3,6 +3,14 @@
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
 <script type="text/javascript">
 jQuery(document).ready(function() {
+
+  // load random background..
+  var images = ['http://www.wallm.com/images/2013/01/fall-backgrounds-high-definition-high.jpg',
+  	 'http://www.wallcg.com/images/2013/02/desktop-sports-surfing-early-morning-background.jpg',
+  	 'http://www.hddesktopbackgrounds.us/backgrounds-images/1920x1080/2iyzb-wallpapers-173812926-1920x1080.jpg',
+  	 'http://www.hddesktopbackgrounds.us/backgrounds-images/1920x1080/psp4i-wallpapers-19586376-1920x1080.jpg'];
+  \$('html').css({'background-image': 'url(' + images[Math.floor(Math.random() * images.length)] + ')'});
+
 //  jQuery("div.content").hide();
   jQuery("a.subscribe").click(function()
   {
