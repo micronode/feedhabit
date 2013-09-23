@@ -17,6 +17,7 @@
 		html.div(class: 'site') {
 			img(src: "/favicon.groovy?p=${subscription.identifier}")
 			a(href: subscription['mn:link'].string, subscription['mn:title'].string)
+			a(href: "/unsubscribe.groovy?p=${subscription.identifier}", title: "Unsubscribe", "X")
 		}
 	}
 	%>
