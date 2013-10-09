@@ -18,6 +18,8 @@ jQuery(document).ready(function() {
       height: 360,
       width: 540,
       modal: true,
+      show: 'puff',
+      hide: 'puff',
       open: function(){
             jQuery('.ui-widget-overlay').bind('click',function(){
                 jQuery("div.subscribe").dialog('close');
@@ -37,6 +39,8 @@ jQuery(document).ready(function() {
       height: 360,
       width: 540,
       modal: true,
+      show: 'puff',
+      hide: 'puff',
       open: function(){
             jQuery('.ui-widget-overlay').bind('click',function(){
                 jQuery('#' + articleId).dialog('destroy');
