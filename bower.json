@@ -1,0 +1,27 @@
+{
+  "name": "feedhabit",
+  "homepage": "https://github.com/micronode/feedhabit",
+  "authors": [
+    "Ben Fortuna <benfortuna@gmail.com>"
+  ],
+  "description": "A feed aggregation site",
+  "main": "index.html",
+  "moduleType": [
+    "es6"
+  ],
+  "keywords": [
+    "rss",
+    "feed"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "react": "~0.14.3"
+  }
+}
