@@ -6,8 +6,32 @@
 <link rel="stylesheet" href="/src/main/webapp/layout.css" />
 <link rel="stylesheet" href="/src/main/webapp/theme.css" />
 <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200|Lato:100|Quicksand:300|Roboto:100italic' rel='stylesheet' type='text/css'>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-402774-8']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
 </head>
 <body>
+<div class="header" style="text-align:center;">
+<div class="search">
+    <a href="http://feedhabit.com" style="border:0"><img src="/src/main/webapp/images/fh48.png" style="float:left;margin:auto"/></a>
+    <form action="search.groovy" method="GET">
+        <input type="text" name="q" value="${request.getParameter('q') ?: ''}" placeholder="Search.."/>
+        <input type="submit" value="Search"/>
+    </form>
+    <a class="subscribe">Subscriptions..</a>
+</div>
+</div>
+
 <div id="container"/>
 <script src="bower_components/react/react.js"></script>
 <script src="bower_components/react/react-dom.js"></script>
