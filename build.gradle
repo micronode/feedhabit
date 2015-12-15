@@ -1,0 +1,51 @@
+buildscript {
+    repositories {
+        mavenLocal()
+        mavenCentral()
+        maven {
+            url 'https://oss.sonatype.org/content/repositories/snapshots'
+        }
+    }
+    dependencies {
+        classpath 'org.figurate:gradle-figurate-plugin:master-SNAPSHOT',
+                'org.figurate:gradle-constellations-plugin:master-SNAPSHOT'
+    }
+}
+apply plugin: 'figurate'
+apply plugin: 'constellations'
+
+repositories {
+    mavenCentral()
+    maven {
+        url 'https://oss.sonatype.org/content/repositories/snapshots'
+    }
+}
+
+dependencies {
+    bundle configurations.constellation$felix, // OSGi runtime
+            configurations.constellation$webconsole, // OSGi dashboard application
+            configurations.constellation$http, // embedded Jetty HTTP server
+            configurations.constellation$rest, // REST support from Amdatu
+            configurations.constellation$jackson, // JSON databinding support for the REST framework
+            configurations.constellation$logback, // logging framework
+            'org.codehaus.groovy:groovy-all:2.4.3', // Groovy runtime
+            configurations.constellation$rss // RSS parsing and REST-ful endpoints from Newsagent library
+
+    runtime configurations.constellation$logback
+}
+
+configurationConfig {
+    configProps = [:]
+}
+launcherConfig {
+    configProps << [
+            'org.osgi.framework.system.packages.extra': 'sun.misc,org.xml.sax*,javax.xml*,javax.*',
+            'org.osgi.framework.system.capabilities.extra': "osgi.ee; osgi.ee=\"JavaSE\";version:List=\"1.0,1.1,1.2,1.3,1.4,1.5,1.6,1.7,1.8\"",
+            // use the next available port from 8080 onwards
+            'org.osgi.service.http.port'        : '[8080,8099)',
+            'org.apache.felix.http.jettyEnabled': 'true',
+            'org.apache.felix.http.whiteboardEnabled': 'true',
+            'org.apache.felix.http.debug'       : 'true'
+    ]
+}
+
