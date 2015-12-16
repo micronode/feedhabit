@@ -55,5 +55,5 @@ You can try the API using Docker as follows:
 
 `docker run -d -p 8080:8080 micronode/feedhabit # start the docker container`
 
-Open the following URL to explore the API using Swagger: http://localhost:8080/ui/index.html
+Open the following URL to explore the API using Swagger: [http://localhost:8080/ui/index.html][]
 
