@@ -47,3 +47,13 @@ Following the Feed Stream of other users has the following effects to your Feed 
  1. Items that have been Flagged, Tagged or Annotated by a user you are following will appear in your Feed Stream (even if you are not subscribed to the source feed)
  2. Items will aggregate and show any Flags, Tags and Annotations on items from those you are following
 
+## Feedhabit API
+
+You can try the API using Docker as follows:
+
+`docker pull micronode/feedhabit # retrieve the latest feedhabit docker image`
+
+`docker run -d -p 8080:8080 micronode/feedhabit # start the docker container`
+
+Open the following URL to explore the API using Swagger: [http://localhost:8080/ui/index.html]()
+
