@@ -4,8 +4,12 @@ EXPOSE 8080 8443
 
 WORKDIR /app
 
+# initialise gradle..
 COPY gradle gradle
-COPY build.gradle gradlew ./
+COPY gradlew ./
+RUN ./gradlew
+
+COPY build.gradle ./
 
 RUN ./gradlew assemble && ./gradlew clean copyBundles launcherConfig loggerConfig configurationConfig
 
