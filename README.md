@@ -61,8 +61,13 @@ Open the following URL to explore the API using Swagger: http://localhost:8080/u
 
 Start a Selenium docker instance:
 
-`$ docker run -d -p 4444:4444 selenium/standalone-chrome`
+`$ docker run -d -p 4444:4444 [-p 5900:5900] selenium/standalone-{chrome|firefox}[-debug]`
 
 Run Geb tests:
 
 `$ ./gradlew test`
+
+Run Geb tests (non-Linux environments):
+
+`$ DOCKER_HOST=$(docker-machine ip default) ./gradlew test`
+
