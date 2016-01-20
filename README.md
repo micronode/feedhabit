@@ -57,3 +57,12 @@ You can try the API using Docker as follows:
 
 Open the following URL to explore the API using Swagger: http://localhost:8080/ui/index.html
 
+## Testing with Selenium
+
+Start a Selenium docker instance:
+
+`$ docker run -d -p 4444:4444 selenium/standalone-chrome`
+
+Run Geb tests:
+
+`$ ./gradlew test`
