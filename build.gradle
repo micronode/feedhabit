@@ -11,6 +11,7 @@ buildscript {
                 'org.figurate:gradle-constellations-plugin:master-SNAPSHOT'
     }
 }
+apply plugin: 'groovy'
 apply plugin: 'figurate'
 apply plugin: 'constellations'
 
@@ -32,6 +33,12 @@ dependencies {
             configurations.constellation$rss // RSS parsing and REST-ful endpoints from Newsagent library
 
     runtime configurations.constellation$logback
+
+    compile 'org.codehaus.groovy:groovy-all:2.4.3', 'org.apache.jackrabbit:jackrabbit-core:2.11.3', 'javax.jcr:jcr:2.0',
+            'javax.servlet:javax.servlet-api:4.0.0-b01', 'org.tuckey:urlrewritefilter:4.0.4',
+            'org.mnode.newsagent:newsagent:0.9.1-SNAPSHOT'
+
+    testCompile 'org.gebish:geb-spock:0.12.2', 'org.seleniumhq.selenium:selenium-remote-driver:2.49.0'
 }
 
 configurationConfig {
