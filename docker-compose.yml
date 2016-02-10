@@ -1,0 +1,6 @@
+feedhabit:
+  build: .
+  ports:
+    - "8080:8080"
+  volumes:
+    - ./build/feedhabit/gradle:/root/.gradle
