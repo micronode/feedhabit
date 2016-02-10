@@ -4,3 +4,9 @@ feedhabit:
     - "8080:8080"
   volumes:
     - ./build/feedhabit/gradle:/root/.gradle
+modeshape:
+  build: .
+  dockerfile: Dockerfile.modeshape
+  ports:
+    - "9990:9990"
+

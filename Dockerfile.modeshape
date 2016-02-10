@@ -1,0 +1,4 @@
+FROM jboss/modeshape
+
+EXPOSE 9990
+
