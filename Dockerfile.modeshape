@@ -1,4 +1,4 @@
 FROM jboss/modeshape
 
-EXPOSE 9990
+EXPOSE 9990 8080 8443
 
