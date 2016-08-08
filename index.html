@@ -1,52 +1,138 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>FeedHabit</title>
-<link rel="stylesheet" href="/src/main/webapp/layout.css" />
-<link rel="stylesheet" href="/src/main/webapp/theme.css" />
-<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200|Lato:100|Quicksand:300|Roboto:100italic' rel='stylesheet' type='text/css'>
-<script type="text/javascript">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
 
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-402774-8']);
-  _gaq.push(['_trackPageview']);
+    <title>FeedHabit.com</title>
 
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
+    <!-- Bootstrap core CSS -->
+    <link href="bower_components/bootstrap-css/css/bootstrap.min.css" rel="stylesheet">
 
-</script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="grid.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
 </head>
+
 <body>
-<div class="header" style="text-align:center;">
-<div class="search">
-    <a href="http://feedhabit.com" style="border:0"><img src="/src/main/webapp/images/fh48.png" style="float:left;margin:auto"/></a>
-    <form action="search.groovy" method="GET">
-        <input type="text" name="q" value="${request.getParameter('q') ?: ''}" placeholder="Search.."/>
-        <input type="submit" value="Search"/>
-    </form>
-    <a class="subscribe">Subscriptions..</a>
-</div>
-</div>
+<div class="container">
 
-<div id="container"/>
-<script src="bower_components/react/react.js"></script>
-<script src="bower_components/react/react-dom.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.24/browser.min.js"></script>
-<script type="text/babel">
-var HelloMessage = React.createClass({
-  render: function() {
-    return <div>Hello {this.props.name}</div>;
-  }
-});
+    <div class="page-header">
+        <h1>FeedHabit</h1>
+        <p class="lead">A curated list of all the feeds you know and some you don't.</p>
+    </div>
 
-ReactDOM.render(
-  <HelloMessage name="Feedhabit" />,
-  document.getElementById('container')
-);
-</script>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="row">
+                <div class="col-md-4">
+                    <h3>In the news</h3>
+                    <p>News on current events around the world.</p>
+                </div>
+                <div class="col-md-8">
+                    <DIV class="block-list">
+                        <UL class="list-group">
+                            <LI class="list-group-item">
+                                <A shape="rect" href="http://www.abc.net.au/news/2016-08-03/living-in-a-van-homeless/7682392?source=rss" title="Ex-defence force worker Jody has lived in a van for for three and a half months, after losing her rental property." data-html="true" rel="tooltip">Ex-defence force worker Jody speaks out about the invisible homeless existing in cars</A>
+                                (8 mins ago)
+                            </LI>
+                            <LI class="list-group-item">
+                                <A shape="rect" href="http://www.abc.net.au/radionational/programs/lawreport/dodgy-migration-agents-taking-advantage-of-migrant-visa/7668606?source=rss" title="People seeking assistance with their migration applications to Australia are routinely being ripped off by dodgy agents." data-html="true" rel="tooltip">Ripped off and kicked out: Immigrants rorted by dodgy migration agents</A>
+                                (Yesterday)
+                            </LI>
+                            <LI class="list-group-item">
+                                <A shape="rect" href="http://www.abc.net.au/news/2016-07-20/shepparton-high-students-learn-party-trauma-program/7641846?source=rss" title="Students from Wanganui Park Secondary College are experiencing the devastating effects of risky behaviour this week while taking part in a hands-on program." data-html="true" rel="tooltip">Shepparton high school students learn about alcohol and risk-related trauma</A>
+                                (1 hour ago)
+                            </LI>
+                            <LI class="list-group-item">
+                                <A shape="rect" href="http://www.abc.net.au/news/2016-07-14/new-plan-for-high-speed-rail-link-between-melbourne-and-sydney/7628316?source=rss" title="It has been talked about for decades, but a private company has launched a $200 billion plan to build a high-speed rail link between Melbourne and Sydney." data-html="true" rel="tooltip">High-speed rail link between Melbourne and Sydney proposed by private company</A>
+                                (July 12, 2016)
+                            </LI>
+                            <LI class="list-group-item">
+                                <A shape="rect" href="http://www.abc.net.au/news/2016-07-15/shepparton-the-country-town-supporting-its-transgender-teens/7632092?source=rss" title="The regional Victorian town of Shepparton is probably the last place you'd think of as a haven for transgender youth, but the town has a thriving group of young gender-diverse people who are changing the stereotypes and helping to build a supportive community." data-html="true" rel="tooltip">Shepparton, the country town supporting its transgender teens</A>
+                                (moments ago)
+                            </LI>
+                            <LI class="list-group-item"><A shape="rect" href="http://www.abc.net.au/shepparton">More..</A></LI>
+                        </UL>
+                    </DIV>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <h3>Sport</h3>
+                    <p>Sporting news from around the world.</p>
+                </div>
+                <div class="col-md-8">
+                    <DIV class="block-list">
+                        <UL class="list-group">
+                            <LI class="list-group-item"><A shape="rect" href="http://www.abc.net.au/news/2016-08-03/living-in-a-van-homeless/7682392?source=rss" title="Ex-defence force worker Jody has lived in a van for for three and a half months, after losing her rental property." data-html="true" rel="tooltip">Ex-defence force worker Jody speaks out about the invisible homeless existing in cars</A></LI>
+                            <LI class="list-group-item"><A shape="rect" href="http://www.abc.net.au/radionational/programs/lawreport/dodgy-migration-agents-taking-advantage-of-migrant-visa/7668606?source=rss" title="People seeking assistance with their migration applications to Australia are routinely being ripped off by dodgy agents." data-html="true" rel="tooltip">Ripped off and kicked out: Immigrants rorted by dodgy migration agents</A></LI>
+                            <LI class="list-group-item"><A shape="rect" href="http://www.abc.net.au/news/2016-07-20/shepparton-high-students-learn-party-trauma-program/7641846?source=rss" title="Students from Wanganui Park Secondary College are experiencing the devastating effects of risky behaviour this week while taking part in a hands-on program." data-html="true" rel="tooltip">Shepparton high school students learn about alcohol and risk-related trauma</A></LI>
+                            <LI class="list-group-item"><A shape="rect" href="http://www.abc.net.au/shepparton">More..</A></LI>
+                        </UL>
+                    </DIV>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="row">
+                <div class="col-md-4">
+                    <h3>Technology</h3>
+                    <p>Advances in the world of tech.</p>
+                </div>
+                <div class="col-md-8">
+                    <DIV class="block-list">
+                        <UL class="list-group">
+                            <LI class="list-group-item"><A shape="rect" href="http://www.abc.net.au/news/2016-08-03/living-in-a-van-homeless/7682392?source=rss" title="Ex-defence force worker Jody has lived in a van for for three and a half months, after losing her rental property." data-html="true" rel="tooltip">Ex-defence force worker Jody speaks out about the invisible homeless existing in cars</A></LI>
+                            <LI class="list-group-item"><A shape="rect" href="http://www.abc.net.au/radionational/programs/lawreport/dodgy-migration-agents-taking-advantage-of-migrant-visa/7668606?source=rss" title="People seeking assistance with their migration applications to Australia are routinely being ripped off by dodgy agents." data-html="true" rel="tooltip">Ripped off and kicked out: Immigrants rorted by dodgy migration agents</A></LI>
+                            <LI class="list-group-item"><A shape="rect" href="http://www.abc.net.au/news/2016-07-15/shepparton-the-country-town-supporting-its-transgender-teens/7632092?source=rss" title="The regional Victorian town of Shepparton is probably the last place you'd think of as a haven for transgender youth, but the town has a thriving group of young gender-diverse people who are changing the stereotypes and helping to build a supportive community." data-html="true" rel="tooltip">Shepparton, the country town supporting its transgender teens</A></LI>
+                            <LI class="list-group-item"><A shape="rect" href="http://www.abc.net.au/shepparton">More..</A></LI>
+                        </UL>
+                    </DIV>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <h3>Finance</h3>
+                    <p>Financial perspectives from leading sites.</p>
+                </div>
+                <div class="col-md-8">
+                    <DIV class="block-list">
+                        <UL class="list-group">
+                            <LI class="list-group-item"><A shape="rect" href="http://www.abc.net.au/news/2016-08-03/living-in-a-van-homeless/7682392?source=rss" title="Ex-defence force worker Jody has lived in a van for for three and a half months, after losing her rental property." data-html="true" rel="tooltip">Ex-defence force worker Jody speaks out about the invisible homeless existing in cars</A></LI>
+                            <LI class="list-group-item"><A shape="rect" href="http://www.abc.net.au/radionational/programs/lawreport/dodgy-migration-agents-taking-advantage-of-migrant-visa/7668606?source=rss" title="People seeking assistance with their migration applications to Australia are routinely being ripped off by dodgy agents." data-html="true" rel="tooltip">Ripped off and kicked out: Immigrants rorted by dodgy migration agents</A></LI>
+                            <LI class="list-group-item"><A shape="rect" href="http://www.abc.net.au/news/2016-07-14/new-plan-for-high-speed-rail-link-between-melbourne-and-sydney/7628316?source=rss" title="It has been talked about for decades, but a private company has launched a $200 billion plan to build a high-speed rail link between Melbourne and Sydney." data-html="true" rel="tooltip">High-speed rail link between Melbourne and Sydney proposed by private company</A></LI>
+                            <LI class="list-group-item"><A shape="rect" href="http://www.abc.net.au/news/2016-07-15/shepparton-the-country-town-supporting-its-transgender-teens/7632092?source=rss" title="The regional Victorian town of Shepparton is probably the last place you'd think of as a haven for transgender youth, but the town has a thriving group of young gender-diverse people who are changing the stereotypes and helping to build a supportive community." data-html="true" rel="tooltip">Shepparton, the country town supporting its transgender teens</A></LI>
+                            <LI class="list-group-item"><A shape="rect" href="http://www.abc.net.au/shepparton">More..</A></LI>
+                        </UL>
+                    </DIV>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div> <!-- /container -->
+
+
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
 </body>
 </html>
