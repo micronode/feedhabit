@@ -1,22 +1,19 @@
 package com.feedhabit
 
-import groovy.util.logging.Slf4j;
-import groovyx.gpars.GParsPool
-
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors
-import java.util.concurrent.TimeUnit
-
-import javax.jcr.SimpleCredentials
-import javax.naming.InitialContext
-import javax.servlet.ServletContextEvent
-import javax.servlet.ServletContextListener
-
+import groovy.util.logging.Slf4j
 import org.mnode.juicer.query.QueryBuilder
 import org.mnode.newsagent.FeedReader
 import org.mnode.newsagent.FeedReaderImpl
 import org.mnode.newsagent.jcr.JcrFeedCallback
 import org.mnode.newsagent.util.FeedFetcherCacheImpl
+
+import javax.jcr.SimpleCredentials
+import javax.naming.InitialContext
+import javax.servlet.ServletContextEvent
+import javax.servlet.ServletContextListener
+import java.util.concurrent.ExecutorService
+import java.util.concurrent.Executors
+import java.util.concurrent.TimeUnit
 
 @Slf4j
 class ScheduledUpdateListener implements ServletContextListener {

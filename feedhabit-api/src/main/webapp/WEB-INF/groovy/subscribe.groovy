@@ -1,10 +1,10 @@
-import javax.jcr.Session
-
 import org.mnode.newsagent.FeedReader
 import org.mnode.newsagent.FeedReaderImpl
 import org.mnode.newsagent.jcr.JcrFeedCallback
 import org.mnode.newsagent.util.FeedFetcherCacheImpl
 import org.mnode.newsagent.util.SiteResolver
+
+import javax.jcr.Session
 
 if (request.getParameter('s')) {
 	Session session = request.jcrSession

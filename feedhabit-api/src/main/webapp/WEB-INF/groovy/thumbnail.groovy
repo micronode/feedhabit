@@ -1,6 +1,4 @@
 import javax.jcr.Session
-import javax.jcr.SimpleCredentials
-import javax.naming.InitialContext
 
 Session session = request.getAttribute('jcrSession')
 

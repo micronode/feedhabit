@@ -3,12 +3,7 @@ package com.feedhabit
 import javax.jcr.Session
 import javax.jcr.SimpleCredentials
 import javax.naming.InitialContext
-import javax.servlet.Filter
-import javax.servlet.FilterChain
-import javax.servlet.FilterConfig
-import javax.servlet.ServletException
-import javax.servlet.ServletRequest
-import javax.servlet.ServletResponse
+import javax.servlet.*
 
 class JcrSessionFilter implements Filter {
 

@@ -1,14 +1,13 @@
 package com.feedhabit
 
-import groovy.util.logging.Slf4j;
+import groovy.util.logging.Slf4j
+import org.apache.jackrabbit.core.jndi.RegistryHelper
 
-import javax.jcr.NamespaceException;
+import javax.jcr.NamespaceException
 import javax.jcr.SimpleCredentials
 import javax.naming.InitialContext
-import javax.servlet.ServletContextEvent;
-import javax.servlet.ServletContextListener;
-
-import org.apache.jackrabbit.core.jndi.RegistryHelper
+import javax.servlet.ServletContextEvent
+import javax.servlet.ServletContextListener
 
 @Slf4j
 class RepositoryLoaderListener implements ServletContextListener {

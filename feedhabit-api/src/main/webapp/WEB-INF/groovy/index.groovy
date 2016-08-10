@@ -1,15 +1,7 @@
-import javax.jcr.Session
-import javax.jcr.SimpleCredentials
-import javax.jcr.query.qom.QueryObjectModelConstants;
-import javax.naming.InitialContext
-
 import org.mnode.juicer.query.QueryBuilder
-import org.mnode.newsagent.FeedReader
-import org.mnode.newsagent.FeedReaderImpl
-import org.mnode.newsagent.jcr.JcrFeedCallback
-import org.mnode.newsagent.util.FeedFetcherCacheImpl
-import org.mnode.newsagent.util.SiteResolver
 
+import javax.jcr.Session
+import javax.jcr.query.qom.QueryObjectModelConstants
 
 Session session = request.jcrSession
 /*
