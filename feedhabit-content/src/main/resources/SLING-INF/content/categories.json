@@ -1,0 +1,48 @@
+{
+  "title": "Categories - FeedHabit.com",
+  "sling:resourceType": "feedhabit/page/list",
+  "jcr:primaryType": "nt:unstructured",
+  "list": {
+    "sling:resourceType": "feedhabit/block/category-list",
+    "in-the-news": {
+      "sling:resourceType": "feedhabit/block/category",
+      "title": "In the news",
+      "description": "News on current events around the world."
+    },
+    "sport": {
+      "sling:resourceType": "feedhabit/block/category",
+      "title": "Sport",
+      "description": "Sporting news from around the world."
+    },
+    "science": {
+      "sling:resourceType": "feedhabit/block/category",
+      "title": "Science",
+      "description": "Breaking news in science."
+    },
+    "health": {
+      "sling:resourceType": "feedhabit/block/category",
+      "title": "Health",
+      "description": "The latest in health news."
+    },
+    "technology": {
+      "sling:resourceType": "feedhabit/block/category",
+      "title": "Technology",
+      "description": "Advances in the world of tech."
+    },
+    "finance": {
+      "sling:resourceType": "feedhabit/block/category",
+      "title": "Finance",
+      "description": "Financial perspectives from leading sites."
+    },
+    "world": {
+      "sling:resourceType": "feedhabit/block/category",
+      "title": "World",
+      "description": "News from around the globe."
+    },
+    "entertainment": {
+      "sling:resourceType": "feedhabit/block/category",
+      "title": "Entertainment",
+      "description": "Leading headlines in entertainment."
+    }
+  }
+}
