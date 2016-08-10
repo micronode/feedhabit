@@ -1,0 +1,37 @@
+<div class="col-md-6">
+    <div class="row">
+        <div class="col-md-4">
+            <h3>
+                <a href="/content/feedhabit/category.html<%= currentNode %>"><%= currentNode.title %></a>
+            </h3>
+            <p><%= currentNode.description %></p>
+        </div>
+        <div class="col-md-8">
+        <DIV class="block-list">
+            <UL class="list-group">
+                <LI class="list-group-item">
+                    <A shape="rect" href="http://www.abc.net.au/news/2016-08-03/living-in-a-van-homeless/7682392?source=rss" title="Ex-defence force worker Jody has lived in a van for for three and a half months, after losing her rental property." data-html="true" rel="tooltip">Ex-defence force worker Jody speaks out about the invisible homeless existing in cars</A>
+                    (8 mins ago)
+                </LI>
+                <LI class="list-group-item">
+                    <A shape="rect" href="http://www.abc.net.au/radionational/programs/lawreport/dodgy-migration-agents-taking-advantage-of-migrant-visa/7668606?source=rss" title="People seeking assistance with their migration applications to Australia are routinely being ripped off by dodgy agents." data-html="true" rel="tooltip">Ripped off and kicked out: Immigrants rorted by dodgy migration agents</A>
+                    (Yesterday)
+                </LI>
+                <LI class="list-group-item">
+                    <A shape="rect" href="http://www.abc.net.au/news/2016-07-20/shepparton-high-students-learn-party-trauma-program/7641846?source=rss" title="Students from Wanganui Park Secondary College are experiencing the devastating effects of risky behaviour this week while taking part in a hands-on program." data-html="true" rel="tooltip">Shepparton high school students learn about alcohol and risk-related trauma</A>
+                    (1 hour ago)
+                </LI>
+                <LI class="list-group-item">
+                    <A shape="rect" href="http://www.abc.net.au/news/2016-07-14/new-plan-for-high-speed-rail-link-between-melbourne-and-sydney/7628316?source=rss" title="It has been talked about for decades, but a private company has launched a $200 billion plan to build a high-speed rail link between Melbourne and Sydney." data-html="true" rel="tooltip">High-speed rail link between Melbourne and Sydney proposed by private company</A>
+                    (July 12, 2016)
+                </LI>
+                <LI class="list-group-item">
+                    <A shape="rect" href="http://www.abc.net.au/news/2016-07-15/shepparton-the-country-town-supporting-its-transgender-teens/7632092?source=rss" title="The regional Victorian town of Shepparton is probably the last place you'd think of as a haven for transgender youth, but the town has a thriving group of young gender-diverse people who are changing the stereotypes and helping to build a supportive community." data-html="true" rel="tooltip">Shepparton, the country town supporting its transgender teens</A>
+                    (moments ago)
+                </LI>
+                <LI class="list-group-item"><A shape="rect" href="http://www.abc.net.au/shepparton">More..</A></LI>
+            </UL>
+        </DIV>
+        </div>
+    </div>
+</div>

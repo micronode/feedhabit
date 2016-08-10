@@ -1,0 +1,5 @@
+<% var page = request.resourceResolver.resolve(request.requestPathInfo.suffix); %>
+<div class="page-header">
+    <h1><%= page.adaptTo(javax.jcr.Node).title %></h1>
+    <p class="lead"><%= page.adaptTo(javax.jcr.Node).description %></p>
+</div>
