@@ -22,7 +22,7 @@
     <link href="/libs/wp-bootstrap/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="/apps/feedhabit/grid.css" rel="stylesheet">
+    <link href="/apps/feedhabit/css/grid.css" rel="stylesheet">
     <link href="/apps/feedhabit/css/style.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
