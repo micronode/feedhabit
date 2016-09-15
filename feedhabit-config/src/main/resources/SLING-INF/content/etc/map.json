@@ -1,0 +1,7 @@
+{
+  "http": {
+    "feedhabit.com.80": {
+      "sling:redirect": "http://www.feedhabit.com/"
+    }
+  }
+}
