@@ -2,6 +2,22 @@
   "http": {
     "feedhabit.com.80": {
       "sling:redirect": "http://www.feedhabit.com/"
+    },
+    "any_feedhabit.com.80": {
+      "sling:match": ".+\.feedhabit\.com\.80",
+      "sling:internalRedirect": "/content/feedhabit",
+      "apps": {
+        "sling:internalRedirect": "/apps"
+      },
+      "libs": {
+        "sling:internalRedirect": "/libs"
+      },
+      "system": {
+        "sling:internalRedirect": "/system"
+      },
+      "wp": {
+        "sling:internalRedirect": "/content/wp"
+      }
     }
   }
 }
