@@ -1,51 +1,61 @@
+import org.apache.http.entity.mime.MultipartEntityBuilder;
+
 buildscript {
     repositories {
-        mavenLocal()
         mavenCentral()
         maven {
             url 'https://oss.sonatype.org/content/repositories/snapshots'
         }
+        maven {
+            url 'https://plugins.gradle.org/m2/'
+        }
     }
     dependencies {
-        classpath 'org.figurate:gradle-figurate-plugin:master-SNAPSHOT',
-                'org.figurate:gradle-constellations-plugin:master-SNAPSHOT'
-    }
-}
-apply plugin: 'figurate'
-apply plugin: 'constellations'
-
-repositories {
-    mavenCentral()
-    maven {
-        url 'https://oss.sonatype.org/content/repositories/snapshots'
+        classpath 'org.figurate:gradle-bundle-plugin:1.0.1-feature-codenarc-analysis-SNAPSHOT'
+        classpath 'org._10ne.gradle:rest-gradle-plugin:0.4.2', 'org.apache.httpcomponents:httpmime:4.3.6'
     }
 }
 
-dependencies {
-    bundle configurations.constellation$felix, // OSGi runtime
-            configurations.constellation$webconsole, // OSGi dashboard application
-            configurations.constellation$http, // embedded Jetty HTTP server
-            configurations.constellation$rest, // REST support from Amdatu
-            configurations.constellation$jackson, // JSON databinding support for the REST framework
-            configurations.constellation$logback, // logging framework
-            'org.codehaus.groovy:groovy-all:2.4.3', // Groovy runtime
-            configurations.constellation$rss // RSS parsing and REST-ful endpoints from Newsagent library
+subprojects {
+    apply plugin: 'bundle'
+    apply plugin: 'org.tenne.rest'
 
-    runtime configurations.constellation$logback
-}
+    repositories {
+        mavenCentral()
+    }
 
-configurationConfig {
-    configProps = [:]
-}
-launcherConfig {
-    configProps << [
-            'org.osgi.framework.system.packages.extra': 'sun.misc,org.xml.sax,org.xml.sax.ext,org.xml.sax.helpers,javax.imageio.spi,javax.xml,javax.xml.datatype,javax.xml.parsers,javax.xml.transform,javax.xml.transform.sax,javax.xml.transform.dom,javax.xml.transform.stream,javax.net.ssl,org.w3c.dom,javax.management,javax.management.openmbean,javax.naming,javax.xml.namespace,javax.swing.event,javax.transaction.xa,javax.imageio,javax.xml.validation,javax.activation,javax.annotation,javax.xml.bind,javax.xml.bind.annotation,javax.xml.bind.annotation.adapters,javax.xml.bind.attachment,javax.xml.stream',
-            'org.osgi.framework.system.capabilities.extra': "osgi.ee; osgi.ee=\"JavaSE\";version:List=\"1.0,1.1,1.2,1.3,1.4,1.5,1.6,1.7,1.8\"",
-            // use the next available port from 8080 onwards
-            'org.osgi.service.http.port'        : '[8080,8099)',
-            'org.apache.felix.http.jettyEnabled': 'true',
-            'org.apache.felix.http.whiteboardEnabled': 'true',
-            'org.apache.felix.http.debug'       : 'true'
-    ]
+    task mkClassesDir << {
+      new File("$buildDir/classes/main").mkdirs()
+    }
+    tasks.processResources.dependsOn mkClassesDir
+
+    task deployBundle(type: org._10ne.gradle.rest.RestTask) {
+        client.encoder.putAt('multipart/form-data', { body ->
+            MultipartEntityBuilder multipartRequestEntity = MultipartEntityBuilder.create()
+            body.each { part ->
+                if (part.value instanceof File) {
+                    multipartRequestEntity.addBinaryBody(part.key, part.value).build()
+                } else {
+                    multipartRequestEntity.addTextBody(part.key, part.value).build()
+                }
+            }
+            multipartRequestEntity.build()
+        })
+
+        httpMethod = 'post'
+        contentType = 'multipart/form-data'
+        uri = "http://$sling_host:$sling_port/system/console/bundles"
+        username = sling_username
+        password = sling_password
+        requestBody = [action: 'install', bundlestartlevel: '20', bundlefile: file("$buildDir/libs/$jar.archiveName")]
+        requestHeaders = ['User-Agent': project.name, 'Cache-Control': 'no-cache']
+    }
+
+    task startBundle << {
+        project.deployBundle.uri = "http://$sling_host:$sling_port/system/console/bundles/app.$project.name"
+        project.deployBundle.requestBody.clear()
+        project.deployBundle.requestBody.action = 'start'
+        tasks.deployBundle.execute()
+    }
 }
 

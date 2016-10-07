@@ -1,0 +1,6 @@
+{
+  "title":"FeedHabit.com",
+  "description": "A curated list from all the feeds you know and some you don't.",
+  "sling:resourceType":"feedhabit/page/index",
+  "jcr:primaryType":"nt:unstructured"
+}

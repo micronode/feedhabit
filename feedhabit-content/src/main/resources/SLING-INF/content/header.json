@@ -1,0 +1,5 @@
+{
+  "title":"FeedHabit.com",
+  "sling:resourceType":"feedhabit/header",
+  "jcr:primaryType":"nt:unstructured"
+}

@@ -1,0 +1,11 @@
+<hr style="text-align: center; width: 70%">
+
+<footer>
+    <p>&copy; <%= currentNode.copyright %></p>
+</footer>
+
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="/libs/wp-bootstrap/js/ie10-viewport-bug-workaround.js"></script>
+<SCRIPT src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></SCRIPT>
+<SCRIPT src="/libs/wp-bootstrap/bower_components/bootstrap-css/bootstrap.min.js"></SCRIPT>
+<script src="/libs/wp-rss/js/tooltip.js"></script>

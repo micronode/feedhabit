@@ -1,0 +1,6 @@
+{
+  "title":"FeedHabit.com",
+  "sling:resourceType":"feedhabit/footer",
+  "jcr:primaryType":"nt:unstructured",
+  "copyright": "2016 Micronode, Inc."
+}
