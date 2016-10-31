@@ -1,5 +1,3 @@
-import org.apache.http.entity.mime.MultipartEntityBuilder;
-
 buildscript {
     repositories {
         mavenCentral()
@@ -11,14 +9,12 @@ buildscript {
         }
     }
     dependencies {
-        classpath 'org.figurate:gradle-bundle-plugin:1.0.1-feature-codenarc-analysis-SNAPSHOT'
-        classpath 'org._10ne.gradle:rest-gradle-plugin:0.4.2', 'org.apache.httpcomponents:httpmime:4.3.6'
+        classpath 'org.figurate:gradle-bundle-plugin:1.0.1-SNAPSHOT'
     }
 }
 
 subprojects {
     apply plugin: 'bundle'
-    apply plugin: 'org.tenne.rest'
 
     repositories {
         mavenCentral()
@@ -29,33 +25,9 @@ subprojects {
     }
     tasks.processResources.dependsOn mkClassesDir
 
-    task deployBundle(type: org._10ne.gradle.rest.RestTask) {
-        client.encoder.putAt('multipart/form-data', { body ->
-            MultipartEntityBuilder multipartRequestEntity = MultipartEntityBuilder.create()
-            body.each { part ->
-                if (part.value instanceof File) {
-                    multipartRequestEntity.addBinaryBody(part.key, part.value).build()
-                } else {
-                    multipartRequestEntity.addTextBody(part.key, part.value).build()
-                }
-            }
-            multipartRequestEntity.build()
-        })
-
-        httpMethod = 'post'
-        contentType = 'multipart/form-data'
+    bundleInstall {
         uri = "http://$sling_host:$sling_port/system/console/bundles"
         username = sling_username
         password = sling_password
-        requestBody = [action: 'install', bundlestartlevel: '20', bundlefile: file("$buildDir/libs/$jar.archiveName")]
-        requestHeaders = ['User-Agent': project.name, 'Cache-Control': 'no-cache']
-    }
-
-    task startBundle << {
-        project.deployBundle.uri = "http://$sling_host:$sling_port/system/console/bundles/app.$project.name"
-        project.deployBundle.requestBody.clear()
-        project.deployBundle.requestBody.action = 'start'
-        tasks.deployBundle.execute()
     }
 }
-
