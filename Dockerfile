@@ -9,6 +9,7 @@ COPY gradle gradle
 
 COPY feedhabit-app feedhabit-app
 COPY feedhabit-content feedhabit-content
+COPY feedhabit-config feedhabit-config
 
 ENTRYPOINT ["/app/gradlew"]
 
