@@ -34,15 +34,15 @@
         </DIV>
         </div>
     </div>
-    <div class="result"></div>
+    <div id="result_<%= currentNode %>">"></div>
 </div>
 <script>
 $(document).ready(function() {
     $.ajax({
-        url: "/stub/feed-entries.json",
+        url: "stub/feed-entries.json",
         dataType: 'json'
     }).done(function() {
-        $(".result").html(data);
+        $("#result_<%= currentNode %>">").html(data);
     });
 });
 </script>
