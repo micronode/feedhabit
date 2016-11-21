@@ -37,6 +37,8 @@
 
     <!-- Sling -->
     <script src="/system/sling.js"></script>
+    
+    <SCRIPT src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></SCRIPT>
 </head>
 
 <body>
