@@ -34,4 +34,13 @@
         </DIV>
         </div>
     </div>
+    <div class="result"></div>
 </div>
+<script>
+$.ajax({
+    url: "/stub/feed-entries.json",
+    dataType: 'json'
+}).done(function() {
+    $(".result").html(data);
+});
+</script>

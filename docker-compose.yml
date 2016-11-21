@@ -2,19 +2,26 @@ feedhabit:
   build: .
   links:
     - sling
-  command: build deployBundle startBundle
+  command: build deployBundle
   volumes_from:
     - feedhabit-gradle-cache
+feedhabit-api:
+  build: .
+  command: :feedhabit-api:run
+  volumes_from:
+    - feedhabit-api-gradle-cache
 whistlepost:
   image: micronode/whistlepost
   links:
     - sling
-  command: build deployBundle startBundle
+  command: build deployBundle
   volumes_from:
     - whistlepost-gradle-cache
 sling:
   image: apachesling/sling
   mem_limit: 512m
+  links:
+    - feedhabit-api
   volumes:
     - "./sling.properties:/opt/sling/sling.properties"
   volumes_from:
@@ -32,6 +39,10 @@ haproxy:
     - "1936:1936"
   mem_limit: 128m
 feedhabit-gradle-cache:
+  image: cogniteev/echo:latest
+  volumes:
+    - /root/.gradle
+feedhabit-api-gradle-cache:
   image: cogniteev/echo:latest
   volumes:
     - /root/.gradle
