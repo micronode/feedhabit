@@ -34,7 +34,7 @@
         </DIV>
         </div>
     </div>
-    <div id="result_<%= currentNode.name %>">"></div>
+    <div id="result_<%= currentNode.name %>"></div>
 </div>
 <script>
 $(document).ready(function() {
@@ -42,7 +42,7 @@ $(document).ready(function() {
         url: "stub/feed-entries.json",
         dataType: 'json'
     }).done(function() {
-        $("#result_<%= currentNode.name %>">").html(data);
+        $("#result_<%= currentNode.name %>").html(data);
     });
 });
 </script>
