@@ -20,6 +20,8 @@ whistlepost:
 sling:
   image: apachesling/sling
   mem_limit: 512m
+  links:
+    - feedhabit-api
   volumes:
     - "./sling.properties:/opt/sling/sling.properties"
   volumes_from:
