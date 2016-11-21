@@ -41,7 +41,7 @@ $(document).ready(function() {
     $.ajax({
         url: "stub/feed-entries.json",
         dataType: 'json'
-    }).done(function() {
+    }).done(function(data) {
         $("#result_<%= currentNode.name %>").html(data);
     });
 });
