@@ -17,11 +17,13 @@
 </div>
 <script>
 $(document).ready(function() {
-    $.getJSON("stub/feed-entries.infinity.json", function(data) {
+    $.getJSON("https://ajax.googleapis.com/ajax/services/feed/load?v=1.0&q=http%3A%2F%2Fwww.digg.com%2Frss%2Findex.xml", function(data) {
         var items = [];
-        $.each(data.entries, function(i, val) {
-            if (val.uri) {
-                items.push("<li class=\"list-group-item\"><a href=\"" + val.uri + "\" title=\"" + val.description + "\">" + val.title + "</a></li>");
+        $.each(data.responseData.feed.entries, function(i, val) {
+            if (val.link) {
+                items.push("<li class=\"list-group-item\"><a href=\"" + val.link + "\" title=\"" + val.contentSnippet + "\">" + val.title + "</a></li>");
+            } else if (val.uri) {
+                items.push("<li class=\"list-group-item\"><a href=\"" + val.url + "\" title=\"" + val.description + "\">" + val.title + "</a></li>");
             }
         });
         
