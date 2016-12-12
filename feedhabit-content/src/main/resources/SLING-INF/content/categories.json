@@ -7,42 +7,50 @@
     "in-the-news": {
       "sling:resourceType": "feedhabit/block/category",
       "title": "In the news",
-      "description": "News on current events around the world."
+      "description": "News on current events around the world.",
+      "feedUrl": "http://www.digg.com/rss/index.xml"
     },
     "sport": {
       "sling:resourceType": "feedhabit/block/category",
       "title": "Sport",
-      "description": "Sporting news from around the world."
+      "description": "Sporting news from around the world.",
+      "feedUrl": "http://www.digg.com/rss/index.xml"
     },
     "science": {
       "sling:resourceType": "feedhabit/block/category",
       "title": "Science",
-      "description": "Breaking news in science."
+      "description": "Breaking news in science.",
+      "feedUrl": "http://www.digg.com/rss/index.xml"
     },
     "health": {
       "sling:resourceType": "feedhabit/block/category",
       "title": "Health",
-      "description": "The latest in health news."
+      "description": "The latest in health news.",
+      "feedUrl": "http://www.digg.com/rss/index.xml"
     },
     "technology": {
       "sling:resourceType": "feedhabit/block/category",
       "title": "Technology",
-      "description": "Advances in the world of tech."
+      "description": "Advances in the world of tech.",
+      "feedUrl": "http://www.digg.com/rss/index.xml"
     },
     "finance": {
       "sling:resourceType": "feedhabit/block/category",
       "title": "Finance",
-      "description": "Financial perspectives from leading sites."
+      "description": "Financial perspectives from leading sites.",
+      "feedUrl": "http://www.digg.com/rss/index.xml"
     },
     "world": {
       "sling:resourceType": "feedhabit/block/category",
       "title": "World",
-      "description": "News from around the globe."
+      "description": "News from around the globe.",
+      "feedUrl": "http://www.digg.com/rss/index.xml"
     },
     "entertainment": {
       "sling:resourceType": "feedhabit/block/category",
       "title": "Entertainment",
-      "description": "Leading headlines in entertainment."
+      "description": "Leading headlines in entertainment.",
+      "feedUrl": "http://www.digg.com/rss/index.xml"
     }
   }
 }
