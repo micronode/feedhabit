@@ -37,7 +37,7 @@
 </div>
 <script>
 $(document).ready(function() {
-    $.getJSON("stub/feed-entries.json", function(data) {
+    $.getJSON("stub/feed-entries.infinity.json", function(data) {
         var items = [];
         $.each(data.entries, function(i, val) {
           items.push("<li class=\"list-group-item\"><a href=\"" + val.uri + "\" title=\"" + val.description + "\">" + val.title + "</a></li>");
