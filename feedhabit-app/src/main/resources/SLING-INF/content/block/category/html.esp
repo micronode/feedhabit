@@ -8,7 +8,7 @@
         </div>
         <div class="col-md-8">
         <DIV class="block-list">
-            <UL class="list-group">
+            <UL class="list-group" id="result_<%= currentNode.name %>">
                 <LI class="list-group-item">
                     <A shape="rect" href="http://www.abc.net.au/news/2016-08-03/living-in-a-van-homeless/7682392?source=rss" title="Ex-defence force worker Jody has lived in a van for for three and a half months, after losing her rental property." data-html="true" rel="tooltip">Ex-defence force worker Jody speaks out about the invisible homeless existing in cars</A>
                     (8 mins ago)
@@ -34,15 +34,16 @@
         </DIV>
         </div>
     </div>
-    <div id="result_<%= currentNode.name %>"></div>
 </div>
 <script>
 $(document).ready(function() {
-    $.ajax({
-        url: "stub/feed-entries.json",
-        dataType: 'json'
-    }).done(function(data) {
-        $("#result_<%= currentNode.name %>").html(data);
+    $.getJSON("stub/feed-entries.json", function(data) {
+        var items = [];
+        $.each(data.entries, function(item) {
+          items.push("<li class="list-group-item"><a href=\"" + item.uri + "\" title=\"" + item.description + "\">" + item.title + "</a></li>");
+        };
+        
+        $("ul#result_<%= currentNode.name %>").html(items.join(""));
     });
 });
 </script>
