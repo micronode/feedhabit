@@ -1,19 +1,22 @@
 {
-    "entries": [{
-        "uri": "http://figurate.org/2015/05/23/the-pitfalls-and-wins-of-osgi.html",
-        "title": "The pitfalls and wins of OSGi",
-        "description": "The history of OSGi has been a bumpy road of support and rejection from all parts of the wider IT community, most notably from Spring betting the farm on it, only to reject it a few months later.",
-        "text": [],
-        "link": "http://figurate.org/2015/05/23/the-pitfalls-and-wins-of-osgi.html",
-        "published": 1432339200000
-    }, {
-        "uri": "http://figurate.org/2015/05/02/building-a-feed-aggregator.html",
-        "title": "Building a feed aggregator - Part one",
-        "description": "Feed aggregation is perhaps one of the simplest services you can provide on the Internet. It (usually) doesn’t require authentication, datasets are readily available, and the data itself is simple enough that it can be stored and rendered relatively easily.",
-        "text": [],
-        "link": "http://figurate.org/2015/05/02/building-a-feed-aggregator.html",
-        "published": 1430524800000
-    }],
+    "entries": {
+        "1": {
+            "uri": "http://figurate.org/2015/05/23/the-pitfalls-and-wins-of-osgi.html",
+            "title": "The pitfalls and wins of OSGi",
+            "description": "The history of OSGi has been a bumpy road of support and rejection from all parts of the wider IT community, most notably from Spring betting the farm on it, only to reject it a few months later.",
+            "text": [],
+            "link": "http://figurate.org/2015/05/23/the-pitfalls-and-wins-of-osgi.html",
+            "published": 1432339200000
+        },
+        "2": {
+            "uri": "http://figurate.org/2015/05/02/building-a-feed-aggregator.html",
+            "title": "Building a feed aggregator - Part one",
+            "description": "Feed aggregation is perhaps one of the simplest services you can provide on the Internet. It (usually) doesn’t require authentication, datasets are readily available, and the data itself is simple enough that it can be stored and rendered relatively easily.",
+            "text": [],
+            "link": "http://figurate.org/2015/05/02/building-a-feed-aggregator.html",
+            "published": 1430524800000
+        }
+    },
     "title": "Figurate",
     "description": "Figurate is a framework for building robust, scalable and modular Java applications. Figurate is based on the principles of modularity, testability and adaptability, which provide the basis for a platform that is capable of supporting the processes that underpin many of the modern design and implementation strategies.\n",
     "url": "http://figurate.org/feed.xml",
