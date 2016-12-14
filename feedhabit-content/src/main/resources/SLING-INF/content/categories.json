@@ -8,37 +8,37 @@
       "sling:resourceType": "feedhabit/block/category",
       "title": "In the news",
       "description": "News on current events around the world.",
-      "feedUrl": "http://www.digg.com/rss/index.xml"
+      "feedUrl": "http://www.abc.net.au/news/feed/45910/rss.xml"
     },
     "sport": {
       "sling:resourceType": "feedhabit/block/category",
       "title": "Sport",
       "description": "Sporting news from around the world.",
-      "feedUrl": "http://www.digg.com/rss/index.xml"
+      "feedUrl": "http://www.abc.net.au/news/feed/45924/rss.xml"
     },
     "science": {
       "sling:resourceType": "feedhabit/block/category",
       "title": "Science",
       "description": "Breaking news in science.",
-      "feedUrl": "http://www.digg.com/rss/index.xml"
+      "feedUrl": "http://feeds.newscientist.com/science-news"
     },
     "health": {
       "sling:resourceType": "feedhabit/block/category",
       "title": "Health",
       "description": "The latest in health news.",
-      "feedUrl": "http://www.digg.com/rss/index.xml"
+      "feedUrl": "http://www.health.com/home/feed"
     },
     "technology": {
       "sling:resourceType": "feedhabit/block/category",
       "title": "Technology",
       "description": "Advances in the world of tech.",
-      "feedUrl": "http://www.digg.com/rss/index.xml"
+      "feedUrl": "http://www.zdnet.com/news/rss.xml"
     },
     "finance": {
       "sling:resourceType": "feedhabit/block/category",
       "title": "Finance",
       "description": "Financial perspectives from leading sites.",
-      "feedUrl": "http://www.digg.com/rss/index.xml"
+      "feedUrl": "http://feeds.businessinsider.com.au/businessinsideraustralia"
     },
     "world": {
       "sling:resourceType": "feedhabit/block/category",
@@ -50,7 +50,7 @@
       "sling:resourceType": "feedhabit/block/category",
       "title": "Entertainment",
       "description": "Leading headlines in entertainment.",
-      "feedUrl": "http://www.digg.com/rss/index.xml"
+      "feedUrl": "http://feeds.feedburner.com/thr/news"
     }
   }
 }
