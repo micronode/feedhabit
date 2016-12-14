@@ -21,7 +21,7 @@ $(document).ready(function() {
         var items = [];
         $.each(data.responseData.feed.entries, function(i, val) {
             if (val.link) {
-                items.push("<li class=\"list-group-item\"><a href=\"" + val.link + "\" title=\"" + val.contentSnippet + "\">" + val.title + "</a></li>");
+                items.push("<li class=\"list-group-item\"><a href=\"" + val.link + "\" title=\"" + val.contentSnippet + "\">" + val.title + "</a> (" + moment(val.publishedDate).fromNow() + ")</li>");
             } else if (val.uri) {
                 items.push("<li class=\"list-group-item\"><a href=\"" + val.url + "\" title=\"" + val.description + "\">" + val.title + "</a></li>");
             }
