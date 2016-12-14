@@ -44,7 +44,7 @@
       "sling:resourceType": "feedhabit/block/category",
       "title": "World",
       "description": "News from around the globe.",
-      "feedUrl": "http://www.digg.com/rss/index.xml"
+      "feedUrl": "http://feeds.bbci.co.uk/news/world/rss.xml"
     },
     "entertainment": {
       "sling:resourceType": "feedhabit/block/category",
