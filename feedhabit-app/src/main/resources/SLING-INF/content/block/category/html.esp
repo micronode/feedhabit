@@ -16,7 +16,8 @@
     </div>
 </div>
 <script>
-function processResults_<%= currentNode.name %>(data) {
+$(document).ready(function() {
+    $.getJSON(document.location.protocol + "//ajax.googleapis.com/ajax/services/feed/load?v=1.0&q=" + encodeURIComponent("<%= currentNode.feedUrl %>") + "&callback=?", function(data) {
         var items = [];
         $.each(data.responseData.feed.entries, function(i, val) {
             if (val.link) {
@@ -27,9 +28,6 @@ function processResults_<%= currentNode.name %>(data) {
         });
         
         $("ul#result_<%= currentNode.name %>").html(items.join(""));
-}
-
-$(document).ready(function() {
-    $.getJSON(document.location.protocol + "//ajax.googleapis.com/ajax/services/feed/load?v=1.0&q=" + encodeURIComponent("<%= currentNode.feedUrl %>") + "&callback=processResults_<%= currentNode.name %>");
+    });
 });
 </script>
