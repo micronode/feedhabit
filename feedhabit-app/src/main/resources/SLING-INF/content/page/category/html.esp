@@ -18,6 +18,9 @@
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="/libs/wp-bootstrap/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 
+    <!-- Enabled font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <!-- Custom styles for this template -->
     <link href="/apps/feedhabit/grid.css" rel="stylesheet">
     <link href="/apps/feedhabit/css/style.css" rel="stylesheet">
