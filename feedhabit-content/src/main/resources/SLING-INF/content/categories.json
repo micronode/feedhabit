@@ -51,6 +51,18 @@
       "title": "Entertainment",
       "description": "Leading headlines in entertainment.",
       "feedUrl": "http://feeds.feedburner.com/thr/news"
+    },
+    "developer": {
+      "sling:resourceType": "feedhabit/block/category",
+      "title": "Developer",
+      "description": "News and articles from the DZone community.",
+      "feedUrl": "http://feeds.dzone.com/home"
+    },
+    "internet": {
+      "sling:resourceType": "feedhabit/block/category",
+      "title": "Internet",
+      "description": "Networking and Internet news.",
+      "feedUrl": "http://www.itnews.com.au/RSS/rss.ashx"
     }
   }
 }

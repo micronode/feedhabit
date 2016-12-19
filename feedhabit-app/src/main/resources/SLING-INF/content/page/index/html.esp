@@ -50,9 +50,14 @@
     <% sling.include("header.html/" + currentNode.path); %>
 
     <div class="row">
-        <% sling.include("categories/list.html"); %>
+        <% sling.include("categories/list.html/8"); %>
     </div>
-
+    
+    <div class="row">
+        <div class="col-md-12">
+          <a href="categories.html" style="font-size: 1.4em;">More categories..</a>
+        </div>
+    </div>
 
 </div> <!-- /container -->
 
