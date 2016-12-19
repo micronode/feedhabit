@@ -63,6 +63,24 @@
       "title": "Internet",
       "description": "Networking and Internet news.",
       "feedUrl": "http://www.itnews.com.au/RSS/rss.ashx"
+    },
+    "gaming": {
+      "sling:resourceType": "feedhabit/block/category",
+      "title": "Gaming",
+      "description": "Gamer news.",
+      "feedUrl": "http://feeds.ign.com/ign/all"
+    },
+    "lifestyle": {
+      "sling:resourceType": "feedhabit/block/category",
+      "title": "Lifestyle",
+      "description": "Lifestyle news.",
+      "feedUrl": "http://www.lifehack.org/feed"
+    },
+    "mobile": {
+      "sling:resourceType": "feedhabit/block/category",
+      "title": "Mobile",
+      "description": "Mobile news.",
+      "feedUrl": "http://www.gsmarena.com/rss-news-reviews.php3"
     }
   }
 }
