@@ -19,11 +19,11 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.min.js"></script>
 <script>
 $(document).ready(function() {
-    $.getJSON(document.location.protocol + "//ajax.googleapis.com/ajax/services/feed/load?v=1.0&q=" + encodeURIComponent("<%= currentNode.feedUrl %>") + "&callback=?", function(data) {
+    $.getJSON(document.location.protocol + "//api.rss2json.com/v1/api.json?rss_url=" + encodeURIComponent("<%= currentNode.feedUrl %>") + "&callback=?", function(data) {
         var items = [];
-        $.each(data.responseData.feed.entries, function(i, val) {
+        $.each(data.items, function(i, val) {
             if (val.link) {
-                items.push("<li class=\"list-group-item\"><a href=\"" + val.link + "\" title=\"" + val.contentSnippet + "\">" + val.title + "</a> (" + moment(val.publishedDate).fromNow() + ")</li>");
+                items.push("<li class=\"list-group-item\"><a href=\"" + val.link + "\" title=\"" + val.description + "\">" + val.title + "</a> (" + moment(val.pubDate).fromNow() + ")</li>");
             } else if (val.uri) {
                 items.push("<li class=\"list-group-item\"><a href=\"" + val.url + "\" title=\"" + val.description + "\">" + val.title + "</a></li>");
             }
