@@ -23,7 +23,7 @@ $(document).ready(function() {
         var items = [];
         $.each(data.items, function(i, val) {
             if (val.link) {
-                items.push("<li class=\"list-group-item\"><a href=\"" + val.link + "\" title=\"" + val.description.split('"').join('&quot;') + "\" data-html=\"true\" rel=\"tooltip\">" + val.title + "</a> (" + moment(val.pubDate).fromNow() + ")</li>");
+                items.push("<li class=\"list-group-item\"><a href=\"" + val.link + "\" title=\"" + val.description.split('"').join('&quot;') + "\" data-html=\"true\" rel=\"tooltip\">" + val.title + "</a> (" + moment(val.pubDate).fromNow() + ") <a target=\"_blank\" href=\"https://twitter.com/intent/tweet?text=" + val.title + "&url=" + val.link + "\"><span class="fa fa-twitter" style="font-size:1.2em;"></span></a></li>");
             } else if (val.uri) {
                 items.push("<li class=\"list-group-item\"><a href=\"" + val.url + "\" title=\"" + val.description + "\">" + val.title + "</a></li>");
             }
