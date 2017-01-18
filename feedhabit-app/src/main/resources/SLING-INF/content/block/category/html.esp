@@ -19,7 +19,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.min.js"></script>
 <script>
 $(document).ready(function() {
-    $.getJSON(document.location.protocol + "//api.rss2json.com/v1/api.json?rss_url=" + encodeURIComponent("<%= currentNode.feedUrl %>") + "&callback=?", function(data) {
+    $.getJSON(document.location.protocol + "//api.rss2json.com/v1/api.json?api_key=rm26myq8nconjkqiiqnwrw4x7xypqec046mziokl&rss_url=" + encodeURIComponent("<%= currentNode.feedUrl %>") + "&callback=?", function(data) {
         var items = [];
         $.each(data.items, function(i, val) {
             if (val.link) {
