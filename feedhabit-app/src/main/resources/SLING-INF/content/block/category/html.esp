@@ -9,7 +9,7 @@
         <div class="col-md-8">
         <DIV class="block-list">
             <UL class="list-group" id="result_<%= currentNode.name %>">
-                <LI class="list-group-item"><span class="fa fa-spinner fa-pulse fa-3x fa-fw"></span> Loading..</LI>
+                <LI class="list-group-item"><span class="fa fa-spinner fa-pulse"></span> Loading..</LI>
             </UL>
         </DIV>
         </div>
