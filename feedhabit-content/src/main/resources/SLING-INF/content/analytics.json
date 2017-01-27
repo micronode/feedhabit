@@ -1,0 +1,6 @@
+{
+  "title":" - Feedhabit.com",
+  "sling:resourceType":"/libs/wp-analytics",
+  "gaTrackingId": "UA-402774-8",
+  "jcr:primaryType":"nt:unstructured"
+}
