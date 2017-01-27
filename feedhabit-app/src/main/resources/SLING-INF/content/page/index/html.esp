@@ -49,7 +49,9 @@
 
     <% sling.include("header.html/" + currentNode.path); %>
 
-    <div class="row">
+    <div class="grid">
+        <div class="grid-sizer col-md-6"></div>
+        
         <% sling.include("categories/list.html/8"); %>
     </div>
     
