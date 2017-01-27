@@ -1,18 +1,16 @@
 <div class="grid-item col-md-6">
-    <div class="grid-item-content">
-        <div class="col-md-4">
-            <h3>
-                <a href="/content/feedhabit/category.html<%= currentNode %>"><%= currentNode.title %></a>
-            </h3>
-            <p><%= currentNode.description %></p>
-        </div>
-        <div class="col-md-8">
-        <DIV class="block-list">
-            <UL class="list-group" id="result_<%= currentNode.name %>">
-                <LI class="list-group-item"><span class="fa fa-spinner fa-pulse"></span> Loading..</LI>
-            </UL>
-        </DIV>
-        </div>
+    <div class="col-md-4">
+        <h3>
+            <a href="/content/feedhabit/category.html<%= currentNode %>"><%= currentNode.title %></a>
+        </h3>
+        <p><%= currentNode.description %></p>
+    </div>
+    <div class="col-md-8">
+    <DIV class="block-list">
+        <UL class="list-group" id="result_<%= currentNode.name %>">
+            <LI class="list-group-item"><span class="fa fa-spinner fa-pulse"></span> Loading..</LI>
+        </UL>
+    </DIV>
     </div>
 </div>
 <!-- Enable moment.js for date formatting -->
