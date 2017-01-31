@@ -8,79 +8,92 @@
       "sling:resourceType": "feedhabit/block/category",
       "title": "In the news",
       "description": "News on current events around the world.",
-      "feedUrl": "http://www.abc.net.au/news/feed/45910/rss.xml"
+      "feedUrl": "http://www.abc.net.au/news/feed/45910/rss.xml",
+      "icon": "fa fa-newspaper-o"
     },
     "sport": {
       "sling:resourceType": "feedhabit/block/category",
       "title": "Sport",
       "description": "Sporting news from around the world.",
-      "feedUrl": "http://www.abc.net.au/news/feed/45924/rss.xml"
+      "feedUrl": "http://www.abc.net.au/news/feed/45924/rss.xml",
+      "icon": "fa fa-futbol-o"
     },
     "science": {
       "sling:resourceType": "feedhabit/block/category",
       "title": "Science",
       "description": "Breaking news in science.",
-      "feedUrl": "http://feeds.newscientist.com/science-news"
+      "feedUrl": "http://feeds.newscientist.com/science-news",
+      "icon": "fa fa-flask"
     },
     "health": {
       "sling:resourceType": "feedhabit/block/category",
       "title": "Health",
       "description": "The latest in health news.",
-      "feedUrl": "http://www.health.com/home/feed"
+      "feedUrl": "http://www.health.com/home/feed",
+      "icon": "fa fa-medkit"
     },
     "technology": {
       "sling:resourceType": "feedhabit/block/category",
       "title": "Technology",
       "description": "Advances in the world of tech.",
-      "feedUrl": "http://www.zdnet.com/news/rss.xml"
+      "feedUrl": "http://www.zdnet.com/news/rss.xml",
+      "icon": "fa fa-microchip"
     },
     "finance": {
       "sling:resourceType": "feedhabit/block/category",
       "title": "Finance",
       "description": "Financial perspectives from leading sites.",
-      "feedUrl": "http://feeds.businessinsider.com.au/businessinsideraustralia"
+      "feedUrl": "http://feeds.businessinsider.com.au/businessinsideraustralia",
+      "icon": "fa fa-money"
     },
     "world": {
       "sling:resourceType": "feedhabit/block/category",
       "title": "World",
       "description": "News from around the globe.",
-      "feedUrl": "http://feeds.bbci.co.uk/news/world/rss.xml"
+      "feedUrl": "http://feeds.bbci.co.uk/news/world/rss.xml",
+      "icon": "fa fa-globe"
     },
     "entertainment": {
       "sling:resourceType": "feedhabit/block/category",
       "title": "Entertainment",
       "description": "Leading headlines in entertainment.",
-      "feedUrl": "http://feeds.feedburner.com/thr/news"
+      "feedUrl": "http://feeds.feedburner.com/thr/news",
+      "icon": "fa fa-film"
     },
     "developer": {
       "sling:resourceType": "feedhabit/block/category",
       "title": "Developer",
       "description": "News and articles from the DZone community.",
-      "feedUrl": "http://feeds.dzone.com/home"
+      "feedUrl": "http://feeds.dzone.com/home",
+      "icon": "fa fa-code-fork"
     },
     "internet": {
       "sling:resourceType": "feedhabit/block/category",
       "title": "Internet",
       "description": "Networking and Internet news.",
-      "feedUrl": "http://www.itnews.com.au/RSS/rss.ashx"
+      "feedUrl": "http://www.itnews.com.au/RSS/rss.ashx",
+      "icon": "fa fa-cloud"
     },
     "gaming": {
       "sling:resourceType": "feedhabit/block/category",
       "title": "Gaming",
       "description": "Gamer news.",
-      "feedUrl": "http://feeds.ign.com/ign/all"
+      "feedUrl": "http://feeds.ign.com/ign/all",
+      "icon": "fa fa-gamepad"
     },
     "lifestyle": {
       "sling:resourceType": "feedhabit/block/category",
       "title": "Lifestyle",
       "description": "Lifestyle news.",
-      "feedUrl": "http://www.lifehack.org/feed"
+      "feedUrl": "http://www.lifehack.org/feed",
+      "icon": "fa fa-cutlery"
     },
     "mobile": {
       "sling:resourceType": "feedhabit/block/category",
       "title": "Mobile",
       "description": "Mobile news.",
-      "feedUrl": "http://www.gsmarena.com/rss-news-reviews.php3"
+      "feedUrl": "http://www.gsmarena.com/rss-news-reviews.php3",
+      "icon": "fa fa-mobile"
     }
   }
 }
