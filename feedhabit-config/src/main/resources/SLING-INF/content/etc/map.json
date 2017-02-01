@@ -1,7 +1,6 @@
 {
   "http": {
     "feedhabit.com.80": {
-      "sling:match": "[^.]+feedhabit\.com\.80",
       "sling:redirect": "http://www.feedhabit.com/"
     },
     "any_feedhabit.com.80": {
