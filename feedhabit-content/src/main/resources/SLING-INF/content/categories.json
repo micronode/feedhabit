@@ -39,6 +39,13 @@
       "feedUrl": "http://www.zdnet.com/news/rss.xml",
       "icon": "fa fa-microchip"
     },
+    "technology-2": {
+      "sling:resourceType": "feedhabit/block/category",
+      "title": "Technology",
+      "description": "Advances in the world of tech.",
+      "feedUrl": "https://www.theregister.co.uk/headlines.atom",
+      "icon": "fa fa-microchip"
+    },
     "finance": {
       "sling:resourceType": "feedhabit/block/category",
       "title": "Finance",
