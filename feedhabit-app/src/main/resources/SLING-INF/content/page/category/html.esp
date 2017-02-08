@@ -52,6 +52,6 @@
 
 </div> <!-- /container -->
 
-<% sling.include("footer.html"); %>
+<% sling.include("/content/feedhabit/footer.html"); %>
 </body>
 </html>
