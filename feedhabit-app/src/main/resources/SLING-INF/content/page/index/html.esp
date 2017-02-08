@@ -47,7 +47,7 @@
 <body>
 <div class="container">
 
-    <% sling.include("header.html/" + currentNode.path); %>
+    <% sling.include("/content/feedhabit/header.html" + currentNode.path); %>
 
     <div class="grid row">
         <% sling.include("categories/list.html/8"); %>
