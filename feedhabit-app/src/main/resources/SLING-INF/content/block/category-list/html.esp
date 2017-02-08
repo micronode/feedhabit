@@ -3,8 +3,8 @@
     var limit = request.requestPathInfo.suffix ? parseInt(request.requestPathInfo.suffix.substring(1)) : Number.MAX_SAFE_INTEGER;
 
     for(var i in currentNode) {
-        if (currentNode[i]['sling:resourceType'] == "feedhabit/block/category") {
-            sling.include(currentNode[i].path + ".html");
+        if (currentNode[i]['sling:resourceType'] == "feedhabit/page/category") {
+            sling.include(currentNode[i].path + ".html", "feedhabit/block/category");
 
             if (++count % 2 == 0) out.write("<div class=\"clearfix visible-md visible-lg\"></div>");
 

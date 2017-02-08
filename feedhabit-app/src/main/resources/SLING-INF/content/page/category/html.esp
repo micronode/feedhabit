@@ -9,8 +9,7 @@
     <meta name="author" content="">
     <link rel="icon" href="/apps/feedhabit/favicon.ico">
 
-    <% var category = request.resourceResolver.resolve(request.requestPathInfo.suffix); %>
-    <title><%= category.adaptTo(javax.jcr.Node).title %><%= currentNode.title %></title>
+    <title><%= currentNode.title %></title>
 
     <!-- Bootstrap core CSS -->
     <link href="/libs/wp-bootstrap/bower_components/bootstrap-css/bootstrap.min.css" rel="stylesheet">
@@ -44,17 +43,10 @@
 <body>
 <div class="container">
 
-    <% sling.include("header.html/" + category.path); %>
+    <% sling.include("header.html/" + currentNode.path); %>
 
     <div class="row">
-        <div class="col-md-12">
-        <%
-            if (currentNode.list) {
-                var suffix = request.requestPathInfo.suffix ? request.requestPathInfo.suffix : "";
-                sling.include(currentNode + "/list.html" + suffix);
-            }
-        %>
-        </div>
+        <% sling.include(currentNode[i].path + ".html", "feedhabit/block/category"); %>
     </div>
 
 

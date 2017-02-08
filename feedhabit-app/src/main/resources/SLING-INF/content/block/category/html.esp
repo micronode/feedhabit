@@ -1,7 +1,7 @@
 <div class="grid-item col-md-6">
     <div class="col-md-4">
         <h3>
-            <a href="/content/feedhabit/category.html<%= currentNode %>"><%= currentNode.title %></a>
+            <a href="<%= currentNode %>.html"><%= currentNode.title %></a>
             <i class="<%= currentNode.icon %>" aria-hidden="true"></i>
         </h3>
         <p><%= currentNode.description %></p>
