@@ -5,6 +5,9 @@ footer {
 
 .fa {
     color: silver;
+}
+
+.list-group-item i.fa {
     display: none;
 }
 
