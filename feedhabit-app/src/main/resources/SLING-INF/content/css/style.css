@@ -7,10 +7,10 @@ footer {
     color: silver;
 }
 
-.list-group-item i.fa {
+.list-group-item span.fa {
     display: none;
 }
 
-.list-group-item:hover .fa {
+.list-group-item:hover span.fa {
     display: inline-block;
 }
