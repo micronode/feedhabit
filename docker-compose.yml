@@ -2,7 +2,7 @@ feedhabit:
   build: .
   links:
     - sling
-  command: build deployBundle
+  command: build bundleInstall
   volumes_from:
     - feedhabit-gradle-cache
 feedhabit-api:
@@ -14,7 +14,7 @@ whistlepost:
   image: micronode/whistlepost
   links:
     - sling
-  command: build deployBundle
+  command: build bundleInstall
   volumes_from:
     - whistlepost-gradle-cache
 sling:
