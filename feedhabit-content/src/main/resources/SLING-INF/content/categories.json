@@ -25,6 +25,13 @@
       "feedUrl": "http://feeds.newscientist.com/science-news",
       "icon": "fa fa-flask"
     },
+    "science-2": {
+      "sling:resourceType": "feedhabit/page/category",
+      "title": "Science",
+      "description": "Breaking news in science.",
+      "feedUrl": "http://science.sciencemag.org/rss/twis.xml",
+      "icon": "fa fa-flask"
+    },
     "health": {
       "sling:resourceType": "feedhabit/page/category",
       "title": "Health",
