@@ -6,7 +6,7 @@
 
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 <script src="/libs/wp-bootstrap/js/ie10-viewport-bug-workaround.js"></script>
-<SCRIPT src="/libs/wp-bootstrap/bower_components/bootstrap-css/bootstrap.min.js"></SCRIPT>
+<SCRIPT src="/libs/wp-bootstrap/bower_components/bootstrap-css/js/bootstrap.js"></SCRIPT>
 <script src="/libs/wp-rss/js/tooltip.js"></script>
 <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
 
