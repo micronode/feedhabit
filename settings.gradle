@@ -1,4 +1,0 @@
-include 'feedhabit-app'
-include 'feedhabit-content'
-include 'feedhabit-config'
-include 'feedhabit-api'

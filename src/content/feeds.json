@@ -1,0 +1,18 @@
+{
+  "title": "Feeds - FeedHabit.com",
+  "sling:resourceType": "feedhabit/page/list",
+  "jcr:primaryType": "nt:unstructured",
+  "list": {
+    "sling:resourceType": "feedhabit/block/feed-list",
+    "abc-shepparton": {
+      "sling:resourceType":"/libs/wp-rss/block/list",
+      "feedUrl": "http://www.abc.net.au/local/topics/shepparton/community-and-society/rss.xml",
+      "htmlUrl": "http://www.abc.net.au/shepparton"
+    },
+    "slashdot-org": {
+      "sling:resourceType":"/libs/wp-rss/block/list",
+      "feedUrl": "http://rss.slashdot.org/Slashdot/slashdotMain",
+      "htmlUrl": "http://slashdot.org"
+    }
+  }
+}
